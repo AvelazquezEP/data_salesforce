@@ -41,82 +41,57 @@ function record_weekly($array_week, $array_lweek)
 /* #endregion */
 
 /* #region data list (weekly) - 8/16/2023 */
+$p_total_daily = [];
+$p_paid_search = [];
+$p_direct = [];
+$p_organic_search = [];
+$p_organic_social = [];
+$p_referral = [];
 
-$week = [16, 17, 18, 19, 20, 21];
+$week = [16, 17, 18, 19, 20, 21, 22];
 $total_week = 498;
 
-$total_daily = [136, 160, 96, 79, 11];
-$paid_search = [58, 68, 53, 23, 2];
-$direct = [47, 41, 25, 40];
-$organic_search = [25, 37, 12, 12, 6];
-$organic_social = [6, 12, 5, 4, 3];
-$referral = [0, 2, 1, 0, 0];
+$total_daily = [136, 160, 96, 79, 11, 1, 1];
+$paid_search = [58, 68, 53, 23, 2, 1, 1];
+$direct = [47, 41, 25, 40, 6, 1, 1];
+$organic_search = [25, 37, 12, 12, 6, 1, 1];
+$organic_social = [6, 12, 5, 4, 3, 1, 1];
+$referral = [0, 2, 1, 0, 0, 1, 1];
 
 /* #endregion */
 
 /* #region data list (last week) */
-$last_week = [9, 10, 11, 12, 13, 14];
+$last_week = [9, 10, 11, 12, 13, 14, 15];
 $total_lastWeek = 588;
 
-$l_total_daily = [0];
-$l_paid_search = [0];
-$l_direct = [0];
-$l_organic_search = [0];
-$l_organic_social = [0];
-$l_referral = [0];
+$l_total_daily = [137, 101, 83, 85, 32, 150, 167];
+$l_paid_search = [58, 46, 47, 20, 6, 89, 70];
+$l_direct = [48, 28, 15, 52, 16, 36, 63];
+$l_organic_search = [26, 25, 17, 10, 8, 21, 28];
+$l_organic_social = [4, 1, 3, 2, 1, 3, 5];
+$l_referral = [1, 1, 1, 1, 1, 1, 1];
 
 /* #endregion */
 
-/* #region invoke function to each User acquisition (weekly) */
-echo " WEEKLY:<br />";
-echo "Total daily:<br />";
-
-var_dump(records_daily($total_daily));
 $daily_record = records_daily($total_daily);
+$paid_search_data = records_daily($paid_search);
+$direct_data = records_daily($direct);
+$organic_search_data = records_daily($organic_search);
+$organic_social_data = records_daily($organic_social);
+$referral_data = records_daily($referral);
 
-// echo "<br /><br /> Paid Search:<br />";
-// var_dump(records_daily($paid_search));
+$l_daily_record = records_daily($l_total_daily);
+$l_paid_search_data = records_daily($l_paid_search);
+$l_direct_data = records_daily($l_direct);
+$l_organic_search_data = records_daily($l_organic_search);
+$l_organic_social_data = records_daily($l_organic_social);
+$l_referral_data = records_daily($l_referral);
 
-// echo "<br /><br />Direct:<br />";
-// var_dump(records_daily($direct));
+$bg_color = '#e2e2e2';
+$actual_date = "08/16/2023 - 08/22/2023";
+$last_date = "08/09/2023 - 08/14/2023";
 
-// echo "<br /><br />Organic Search:<br />";
-// var_dump(records_daily($organic_search));
-
-// echo "<br /><br />Organic Social:<br />";
-// var_dump(records_daily($organic_social));
-
-// echo "<br /><br />Referral:<br />";
 // var_dump(records_daily($referral));
-
-/* #endregion */
-
-/* #region invoke function to each User acquisition (last week) */
-
-// echo "<br />";
-// echo "<br />";
-// echo "<br /><br /> LAST WEEK:<br />";
-
-// echo "Total daily:<br />";
-// var_dump(records_daily($l_total_daily));
-
-// echo "<br /><br /> Paid Search:<br />";
-// var_dump(records_daily($l_paid_search));
-
-// echo "<br /><br />Direct:<br />";
-// var_dump(records_daily($l_direct));
-
-// echo "<br /><br />Organic Search:<br />";
-// var_dump(records_daily($l_organic_search));
-
-// echo "<br /><br />Organic Social:<br />";
-// var_dump(records_daily($l_organic_social));
-
-// echo "<br /><br />Referral:<br />";
-// var_dump(records_daily($l_referral));
-
-// echo "<br /><br />two list:<br />";
-// var_dump(record_weekly($total_daily, $l_total_daily));
 
 /* #endregion */
 
@@ -129,60 +104,266 @@ $daily_record = records_daily($total_daily);
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script> -->
     <title>User acquisition - Report</title>
 </head>
 
 <body style="font-size: 1.5rem;">
 
     <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">User acquisition</h1>
-    <p style="font-size: 1.5rem; text-align: center;"><b>08/16/2022</b> - <b>08/23/2033</b></p>
+    <p style="font-size: 1.5rem; text-align: center;"><b>08/16/2022</b> - <b>08/22/2023</b></p>
     <br>
 
     <p style="font-size: 1.5rem;"><b>users: <?= $total_week ?></b></p>
     <p style="font-size: 1.5rem;"><b> users(last week): <?= $total_lastWeek ?></b></p>
     <section style="margin-top: 2rem;">
 
-        <br>
-
         <section>
             <!-- User acquisition - Total users -->
-            <p> <strong> Daily </strong></p>
-            <table class="table table-bordered table-striped">
-                <thead>
-                    <tr class="active">
-                        <?php foreach ($week as $day) : ?>
-                            <th>08/<?= $day ?>/2023</th>
-                        <?php endforeach; ?>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr align="left">
-                        <?php foreach ($daily_record as $record) : ?>
-                            <th><?= $record ?></th>
-                        <?php endforeach; ?>
-                    </tr>
-                </tbody>
-            </table>
+            <div style="background-color: <?= $bg_color ?>">
+                <p> <strong> Daily </strong></p>
+                <small><?= $actual_date ?></small>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr class="active">
+                            <?php foreach ($week as $day) : ?>
+                                <th>08/<?= $day ?>/2023</th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr align="left">
+                            <?php foreach ($daily_record as $record) : ?>
+                                <th><?= $record ?></th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <small><?= $last_date ?></small>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr class="active">
+                            <?php foreach ($last_week as $day) : ?>
+                                <th>08/<?= $day ?>/2023</th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr align="left">
+                            <?php foreach ($l_daily_record as $record) : ?>
+                                <th><?= $record ?></th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
 
             <!-- User acquisition - Paid Search -->
-            <p> <strong> Paid Search </strong></p>
-            <table class="table table-bordered table-striped">
-                <thead>
-                    <tr class="active">
-                        <?php foreach ($week as $day) : ?>
-                            <th>08/<?= $day ?>/2023</th>
-                        <?php endforeach; ?>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr align="left">
-                        <?php foreach ($organic_search as $record) : ?>
-                            <th><?= $record ?></th>
-                        <?php endforeach; ?>
-                    </tr>
-                </tbody>
-            </table>
+            <div style="background-color: <?= $bg_color ?>">
+                <p> <strong> Paid Search </strong></p>
+                <small><?= $actual_date ?></small>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr class="active">
+                            <?php foreach ($week as $day) : ?>
+                                <th>08/<?= $day ?>/2023</th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr align="left">
+                            <?php foreach ($paid_search_data as $record) : ?>
+                                <th><?= $record ?></th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <small><?= $last_date ?></small>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr class="active">
+                            <?php foreach ($last_week as $day) : ?>
+                                <th>08/<?= $day ?>/2023</th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr align="left">
+                            <?php foreach ($l_paid_search_data as $record) : ?>
+                                <th><?= $record ?></th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- User acquisition - Direct -->
+            <div style="background-color: <?= $bg_color ?>">
+                <p> <strong> Direct </strong></p>
+                <small><?= $actual_date ?></small>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr class="active">
+                            <?php foreach ($week as $day) : ?>
+                                <th>08/<?= $day ?>/2023</th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr align="left">
+                            <?php foreach ($direct_data as $record) : ?>
+                                <th><?= $record ?></th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <small><?= $last_date ?></small>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr class="active">
+                            <?php foreach ($last_week as $day) : ?>
+                                <th>08/<?= $day ?>/2023</th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr align="left">
+                            <?php foreach ($l_direct_data as $record) : ?>
+                                <th><?= $record ?></th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <!-- User acquisition - Organic Search -->
+            <div style="background-color: <?= $bg_color ?>">
+                <p> <strong> Organic Search </strong></p>
+                <small><?= $actual_date ?></small>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr class="active">
+                            <?php foreach ($week as $day) : ?>
+                                <th>08/<?= $day ?>/2023</th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr align="left">
+                            <?php foreach ($organic_search_data as $record) : ?>
+                                <th><?= $record ?></th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <small><?= $last_date ?></small>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr class="active">
+                            <?php foreach ($last_week as $day) : ?>
+                                <th>08/<?= $day ?>/2023</th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr align="left">
+                            <?php foreach ($l_organic_search_data as $record) : ?>
+                                <th><?= $record ?></th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- User acquisition - Organic Social -->
+            <div style="background-color: <?= $bg_color ?>">
+                <p> <strong> Organic Social </strong></p>
+                <small><?= $actual_date ?></small>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr class="active">
+                            <?php foreach ($week as $day) : ?>
+                                <th>08/<?= $day ?>/2023</th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr align="left">
+                            <?php foreach ($organic_social_data as $record) : ?>
+                                <th><?= $record ?></th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <small><?= $last_date ?></small>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr class="active">
+                            <?php foreach ($last_week as $day) : ?>
+                                <th>08/<?= $day ?>/2023</th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr align="left">
+                            <?php foreach ($l_organic_social_data as $record) : ?>
+                                <th><?= $record ?></th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- User acquisition - Referral -->
+            <div style="background-color: <?= $bg_color ?>">
+                <p> <strong> Referral </strong></p>
+                <small><?= $actual_date ?></small>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr class="active">
+                            <?php foreach ($week as $day) : ?>
+                                <th>08/<?= $day ?>/2023</th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr align="left">
+                            <?php foreach ($referral_data as $record) : ?>
+                                <th><?= $record ?></th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <small><?= $last_date ?></small>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr class="active">
+                            <?php foreach ($last_week as $day) : ?>
+                                <th>08/<?= $day ?>/2023</th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr align="left">
+                            <?php foreach ($l_referral_data as $record) : ?>
+                                <th><?= $record ?></th>
+                            <?php endforeach; ?>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
         </section>
         <br>
 
