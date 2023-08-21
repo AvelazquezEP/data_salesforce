@@ -40,13 +40,16 @@ function record_weekly($array_week, $array_lweek)
 
 /* #endregion */
 
+/* #region Percent of each user acquisition day */
+$p_total_daily = [-0.73, 58.42, 15.66, -7.06, -15.63];
+$p_paid_search = [0, 47.83, 12.77, -23.08, 50];
+$p_direct = [-2.08, 46.43, 66.67, 15, -62.5];
+$p_organic_search = [-3.85, 48, -29.41, 20, 400];
+$p_organic_social = [50, 1100, 66.67, 100, -33.33];
+$p_referral = [-100, 100, 0, -100, -100];
+/* #endregion */
+
 /* #region data list (weekly) - 8/16/2023 */
-$p_total_daily = [];
-$p_paid_search = [];
-$p_direct = [];
-$p_organic_search = [];
-$p_organic_social = [];
-$p_referral = [];
 
 $week = [16, 17, 18, 19, 20, 21, 22];
 $total_week = 498;
@@ -73,6 +76,7 @@ $l_referral = [1, 1, 1, 1, 1, 1, 1];
 
 /* #endregion */
 
+/* #region create the final array */
 $daily_record = records_daily($total_daily);
 $paid_search_data = records_daily($paid_search);
 $direct_data = records_daily($direct);
@@ -86,14 +90,13 @@ $l_direct_data = records_daily($l_direct);
 $l_organic_search_data = records_daily($l_organic_search);
 $l_organic_social_data = records_daily($l_organic_social);
 $l_referral_data = records_daily($l_referral);
+/* #endregion */
 
-$bg_color = '#e2e2e2';
+// $bg_color = '#e2e2e2';
+$bg_color = '#fff';
+$cell_color = "red";
 $actual_date = "08/16/2023 - 08/22/2023";
 $last_date = "08/09/2023 - 08/14/2023";
-
-// var_dump(records_daily($referral));
-
-/* #endregion */
 
 ?>
 
@@ -114,15 +117,15 @@ $last_date = "08/09/2023 - 08/14/2023";
     <p style="font-size: 1.5rem; text-align: center;"><b>08/16/2022</b> - <b>08/22/2023</b></p>
     <br>
 
-    <p style="font-size: 1.5rem;"><b>users: <?= $total_week ?></b></p>
-    <p style="font-size: 1.5rem;"><b> users(last week): <?= $total_lastWeek ?></b></p>
+    <!-- <p style="font-size: 1.5rem;"><b>users: <?= $total_week ?></b></p>
+    <p style="font-size: 1.5rem;"><b> users(last week): <?= $total_lastWeek ?></b></p> -->
     <section style="margin-top: 2rem;">
 
         <section>
             <!-- User acquisition - Total users -->
             <div style="background-color: <?= $bg_color ?>">
-                <p> <strong> Daily </strong></p>
-                <small><?= $actual_date ?></small>
+                <p> <strong>Total Daily </strong></p>
+                <!-- <small><?= $actual_date ?></small> -->
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
@@ -133,26 +136,12 @@ $last_date = "08/09/2023 - 08/14/2023";
                     </thead>
                     <tbody>
                         <tr align="left">
-                            <?php foreach ($daily_record as $record) : ?>
-                                <th><?= $record ?></th>
-                            <?php endforeach; ?>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <small><?= $last_date ?></small>
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr class="active">
-                            <?php foreach ($last_week as $day) : ?>
-                                <th>08/<?= $day ?>/2023</th>
-                            <?php endforeach; ?>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr align="left">
-                            <?php foreach ($l_daily_record as $record) : ?>
-                                <th><?= $record ?></th>
+                            <?php foreach ($p_total_daily as $record) : ?>
+                                <?php if ($record < 0) : ?>
+                                    <th style="background-color: <?= $cell_color ?>; color:white;"><?= $record ?> %</th>
+                                <?php else : ?>
+                                    <th><?= $record ?> %</th>
+                                <?php endif; ?>
                             <?php endforeach; ?>
                         </tr>
                     </tbody>
@@ -162,7 +151,6 @@ $last_date = "08/09/2023 - 08/14/2023";
             <!-- User acquisition - Paid Search -->
             <div style="background-color: <?= $bg_color ?>">
                 <p> <strong> Paid Search </strong></p>
-                <small><?= $actual_date ?></small>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
@@ -173,26 +161,12 @@ $last_date = "08/09/2023 - 08/14/2023";
                     </thead>
                     <tbody>
                         <tr align="left">
-                            <?php foreach ($paid_search_data as $record) : ?>
-                                <th><?= $record ?></th>
-                            <?php endforeach; ?>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <small><?= $last_date ?></small>
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr class="active">
-                            <?php foreach ($last_week as $day) : ?>
-                                <th>08/<?= $day ?>/2023</th>
-                            <?php endforeach; ?>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr align="left">
-                            <?php foreach ($l_paid_search_data as $record) : ?>
-                                <th><?= $record ?></th>
+                            <?php foreach ($p_paid_search as $record) : ?>
+                                <?php if ($record < 0) : ?>
+                                    <th style="background-color: <?= $cell_color ?>; color:white;"><?= $record ?> %</th>
+                                <?php else : ?>
+                                    <th><?= $record ?> %</th>
+                                <?php endif; ?>
                             <?php endforeach; ?>
                         </tr>
                     </tbody>
@@ -202,7 +176,6 @@ $last_date = "08/09/2023 - 08/14/2023";
             <!-- User acquisition - Direct -->
             <div style="background-color: <?= $bg_color ?>">
                 <p> <strong> Direct </strong></p>
-                <small><?= $actual_date ?></small>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
@@ -213,41 +186,21 @@ $last_date = "08/09/2023 - 08/14/2023";
                     </thead>
                     <tbody>
                         <tr align="left">
-                            <?php foreach ($direct_data as $record) : ?>
-                                <th><?= $record ?></th>
-                            <?php endforeach; ?>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <small><?= $last_date ?></small>
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr class="active">
-                            <?php foreach ($last_week as $day) : ?>
-                                <th>08/<?= $day ?>/2023</th>
-                            <?php endforeach; ?>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr align="left">
-                            <?php foreach ($l_direct_data as $record) : ?>
-                                <th><?= $record ?></th>
+                            <?php foreach ($p_direct as $record) : ?>
+                                <?php if ($record < 0) : ?>
+                                    <th style="background-color: <?= $cell_color ?>; color:white;"><?= $record ?> %</th>
+                                <?php else : ?>
+                                    <th><?= $record ?> %</th>
+                                <?php endif; ?>
                             <?php endforeach; ?>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <br>
-            <br>
-            <br>
-            <br>
-
             <!-- User acquisition - Organic Search -->
             <div style="background-color: <?= $bg_color ?>">
                 <p> <strong> Organic Search </strong></p>
-                <small><?= $actual_date ?></small>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
@@ -258,26 +211,12 @@ $last_date = "08/09/2023 - 08/14/2023";
                     </thead>
                     <tbody>
                         <tr align="left">
-                            <?php foreach ($organic_search_data as $record) : ?>
-                                <th><?= $record ?></th>
-                            <?php endforeach; ?>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <small><?= $last_date ?></small>
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr class="active">
-                            <?php foreach ($last_week as $day) : ?>
-                                <th>08/<?= $day ?>/2023</th>
-                            <?php endforeach; ?>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr align="left">
-                            <?php foreach ($l_organic_search_data as $record) : ?>
-                                <th><?= $record ?></th>
+                            <?php foreach ($p_organic_search as $record) : ?>
+                                <?php if ($record < 0) : ?>
+                                    <th style="background-color: <?= $cell_color ?>; color:white;"><?= $record ?> %</th>
+                                <?php else : ?>
+                                    <th><?= $record ?> %</th>
+                                <?php endif; ?>
                             <?php endforeach; ?>
                         </tr>
                     </tbody>
@@ -287,7 +226,6 @@ $last_date = "08/09/2023 - 08/14/2023";
             <!-- User acquisition - Organic Social -->
             <div style="background-color: <?= $bg_color ?>">
                 <p> <strong> Organic Social </strong></p>
-                <small><?= $actual_date ?></small>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
@@ -298,26 +236,12 @@ $last_date = "08/09/2023 - 08/14/2023";
                     </thead>
                     <tbody>
                         <tr align="left">
-                            <?php foreach ($organic_social_data as $record) : ?>
-                                <th><?= $record ?></th>
-                            <?php endforeach; ?>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <small><?= $last_date ?></small>
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr class="active">
-                            <?php foreach ($last_week as $day) : ?>
-                                <th>08/<?= $day ?>/2023</th>
-                            <?php endforeach; ?>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr align="left">
-                            <?php foreach ($l_organic_social_data as $record) : ?>
-                                <th><?= $record ?></th>
+                            <?php foreach ($p_organic_social as $record) : ?>
+                                <?php if ($record < 0) : ?>
+                                    <th style="background-color: <?= $cell_color ?>; color:white;"><?= $record ?> %</th>
+                                <?php else : ?>
+                                    <th><?= $record ?> %</th>
+                                <?php endif; ?>
                             <?php endforeach; ?>
                         </tr>
                     </tbody>
@@ -327,7 +251,6 @@ $last_date = "08/09/2023 - 08/14/2023";
             <!-- User acquisition - Referral -->
             <div style="background-color: <?= $bg_color ?>">
                 <p> <strong> Referral </strong></p>
-                <small><?= $actual_date ?></small>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
@@ -338,26 +261,12 @@ $last_date = "08/09/2023 - 08/14/2023";
                     </thead>
                     <tbody>
                         <tr align="left">
-                            <?php foreach ($referral_data as $record) : ?>
-                                <th><?= $record ?></th>
-                            <?php endforeach; ?>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <small><?= $last_date ?></small>
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr class="active">
-                            <?php foreach ($last_week as $day) : ?>
-                                <th>08/<?= $day ?>/2023</th>
-                            <?php endforeach; ?>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr align="left">
-                            <?php foreach ($l_referral_data as $record) : ?>
-                                <th><?= $record ?></th>
+                            <?php foreach ($p_referral as $record) : ?>
+                                <?php if ($record < 0) : ?>
+                                    <th style="background-color: <?= $cell_color ?>; color:white;"><?= $record ?> %</th>
+                                <?php else : ?>
+                                    <th><?= $record ?> %</th>
+                                <?php endif; ?>
                             <?php endforeach; ?>
                         </tr>
                     </tbody>
@@ -396,7 +305,7 @@ $dompdf->loadHtml(ob_get_clean());
 $dompdf->setPaper('A4');
 
 $dompdf->render();
-$dompdf->stream('leads_report.pdf', [
+$dompdf->stream('user_acquisition.pdf', [
     'compress' => true,
     'Attachment' => false,
 ]);
