@@ -1,25 +1,46 @@
 <?php
 
+function get_max_min($acquisition_data_array)
+{
+    $new_data_array = array();
+    for ($i = 0; $i < count($acquisition_data_array); $i++) {
+        if ($acquisition_data_array[$i] < 0) {
+            array_push($new_data_array, $acquisition_data_array[$i]);
+        } elseif ($acquisition_data_array[$i] > 50) {
+            array_push($new_data_array, $acquisition_data_array[$i]);
+        }
+    }
 
-$item1 = '2';
-$item2 = '1';
-$item3 = '2';
-$item4 = '2';
+    return $new_data_array;
+}
 
-$total = $item1 + $item2 + $item3 + $item4;
+function get_min($data_array)
+{
+    $min_array = array();
+    for ($i = 0; $i < count($data_array); $i++) {
+        if ($data_array[$i] < 0) {
+            array_push($min_array, $data_array[$i]);
+        }
+    }
 
-$p_i1 = ($item1 * 100) / $total;
-$p_i2 = ($item2 * 100) / $total;
-$p_i3 = ($item3 * 100) / $total;
-$p_i4 = ($item4 * 100) / $total;
-$p_total = $p_i1 + $p_i2 + $p_i3 + $p_i4;
+    return $min_array;
+}
 
-echo number_format($p_i1, 2);
-echo '</br>';
-echo number_format($p_i2, 2);
-echo '</br>';
-echo number_format($p_i3, 2);
-echo '</br>';
-echo number_format($p_i4, 2);
-echo '</br>';
-echo number_format($p_total, 2);
+function get_total_acquisition_min()
+{
+
+}
+
+/* #region Percent of each user acquisition per day */
+$p_total_daily = [-0.73, 58.42, 15.66, -7.06, -15.63, 60.13, -18.44];
+$p_paid_search = [0, 47.83, 12.77, -23.08, 50, -1.1, -43.24];
+$p_direct = [-2.08, 46.43, 66.67, 15, -62.5, 43.9, -65.15];
+$p_organic_search = [-3.85, 48, -29.41, 20, 400, 2366.67, -48.48];
+$p_organic_social = [50, 1100, 66.67, 100, -33.33, 12.5, 660];
+$p_referral = [-100, 100, 0, -100, -100, 200, -50];
+/* #endregion */
+
+// echo count(get_max_min($p_total_daily)) . "<br />";
+var_dump(
+    count(get_min(get_max_min($p_total_daily)))
+);

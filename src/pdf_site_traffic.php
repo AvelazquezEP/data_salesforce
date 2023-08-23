@@ -7,7 +7,7 @@ $total_last_week = 0;
 
 /* #region Function to get the data conversion of the days */
 
-// function to daily record
+/* #region function to daily record */
 function records_daily($main_array)
 {
     $data_array = array();
@@ -21,8 +21,9 @@ function records_daily($main_array)
 
     return $data_array;
 }
+/* #endregion */
 
-// function to weekly record
+/* #region function to weekly record */
 function record_weekly($array_week, $array_lweek)
 {
     $data_prom = array();
@@ -37,17 +38,34 @@ function record_weekly($array_week, $array_lweek)
 
     return $data_prom;
 }
+/* #endregion */
 
+/* #region function to get the max and min total of recordsne */
+function get_max_min($acquisition_data_array)
+{
+    $new_data_array = array();
+    for ($i = 0; $i < count($acquisition_data_array); $i++) {
+        if ($acquisition_data_array[$i] < 0) {
+            array_push($new_data_array, $acquisition_data_array[$i]);
+        } elseif ($acquisition_data_array[$i] > 50) {
+            array_push($new_data_array, $acquisition_data_array[$i]);
+        }
+    }
+
+    return $new_data_array;
+}
 /* #endregion */
 
 /* #region Percent of each user acquisition day */
-$p_total_daily = [-0.73, 58.42, 15.66, -7.06, -15.63];
-$p_paid_search = [0, 47.83, 12.77, -23.08, 50];
-$p_direct = [-2.08, 46.43, 66.67, 15, -62.5];
-$p_organic_search = [-3.85, 48, -29.41, 20, 400];
-$p_organic_social = [50, 1100, 66.67, 100, -33.33];
-$p_referral = [-100, 100, 0, -100, -100];
+$p_total_daily = [-0.73, 58.42, 15.66, -7.06, -15.63, 60.13, -18.44];
+$p_paid_search = [0, 47.83, 12.77, -23.08, 50, -1.1, -43.24];
+$p_direct = [-2.08, 46.43, 66.67, 15, -62.5, 43.9, -65.15];
+$p_organic_search = [-3.85, 48, -29.41, 20, 400, 2366.67, -48.48];
+$p_organic_social = [50, 1100, 66.67, 100, -33.33, 12.5, 660];
+$p_referral = [-100, 100, 0, -100, -100, 200, -50];
 /* #endregion */
+
+
 
 /* #region data list (weekly) - 8/16/2023 */
 
@@ -94,7 +112,8 @@ $l_referral_data = records_daily($l_referral);
 
 // $bg_color = '#e2e2e2';
 $bg_color = '#fff';
-$cell_color = "red";
+$cell_red = "#ff8f8f";
+$cell_green = "#beecb9";
 $actual_date = "08/16/2023 - 08/22/2023";
 $last_date = "08/09/2023 - 08/14/2023";
 
@@ -115,7 +134,15 @@ $last_date = "08/09/2023 - 08/14/2023";
 
     <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">User acquisition</h1>
     <p style="font-size: 1.5rem; text-align: center;"><b>08/16/2022</b> - <b>08/22/2023</b></p>
-    <br>
+    <div>
+        <div style="width: 12px; height: 12px; background: <?= $cell_green ?>;"></div>
+        <p>More than 50% (positive)</p>
+    </div>
+    <div>
+        <div style="width: 12px; height: 12px; background: <?= $cell_red ?>;"></div>
+        <p>less than 0% (negative)</p>
+    </div>
+    
 
     <!-- <p style="font-size: 1.5rem;"><b>users: <?= $total_week ?></b></p>
     <p style="font-size: 1.5rem;"><b> users(last week): <?= $total_lastWeek ?></b></p> -->
@@ -138,7 +165,9 @@ $last_date = "08/09/2023 - 08/14/2023";
                         <tr align="left">
                             <?php foreach ($p_total_daily as $record) : ?>
                                 <?php if ($record < 0) : ?>
-                                    <th style="background-color: <?= $cell_color ?>; color:white;"><?= $record ?> %</th>
+                                    <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
+                                <?php elseif ($record > 50) : ?>
+                                    <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
                                 <?php else : ?>
                                     <th><?= $record ?> %</th>
                                 <?php endif; ?>
@@ -163,7 +192,9 @@ $last_date = "08/09/2023 - 08/14/2023";
                         <tr align="left">
                             <?php foreach ($p_paid_search as $record) : ?>
                                 <?php if ($record < 0) : ?>
-                                    <th style="background-color: <?= $cell_color ?>; color:white;"><?= $record ?> %</th>
+                                    <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
+                                <?php elseif ($record > 50) : ?>
+                                    <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
                                 <?php else : ?>
                                     <th><?= $record ?> %</th>
                                 <?php endif; ?>
@@ -188,7 +219,9 @@ $last_date = "08/09/2023 - 08/14/2023";
                         <tr align="left">
                             <?php foreach ($p_direct as $record) : ?>
                                 <?php if ($record < 0) : ?>
-                                    <th style="background-color: <?= $cell_color ?>; color:white;"><?= $record ?> %</th>
+                                    <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
+                                <?php elseif ($record > 50) : ?>
+                                    <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
                                 <?php else : ?>
                                     <th><?= $record ?> %</th>
                                 <?php endif; ?>
@@ -213,7 +246,9 @@ $last_date = "08/09/2023 - 08/14/2023";
                         <tr align="left">
                             <?php foreach ($p_organic_search as $record) : ?>
                                 <?php if ($record < 0) : ?>
-                                    <th style="background-color: <?= $cell_color ?>; color:white;"><?= $record ?> %</th>
+                                    <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
+                                <?php elseif ($record > 50) : ?>
+                                    <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
                                 <?php else : ?>
                                     <th><?= $record ?> %</th>
                                 <?php endif; ?>
@@ -238,7 +273,9 @@ $last_date = "08/09/2023 - 08/14/2023";
                         <tr align="left">
                             <?php foreach ($p_organic_social as $record) : ?>
                                 <?php if ($record < 0) : ?>
-                                    <th style="background-color: <?= $cell_color ?>; color:white;"><?= $record ?> %</th>
+                                    <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
+                                <?php elseif ($record > 50) : ?>
+                                    <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
                                 <?php else : ?>
                                     <th><?= $record ?> %</th>
                                 <?php endif; ?>
@@ -263,7 +300,9 @@ $last_date = "08/09/2023 - 08/14/2023";
                         <tr align="left">
                             <?php foreach ($p_referral as $record) : ?>
                                 <?php if ($record < 0) : ?>
-                                    <th style="background-color: <?= $cell_color ?>; color:white;"><?= $record ?> %</th>
+                                    <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
+                                <?php elseif ($record > 50) : ?>
+                                    <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
                                 <?php else : ?>
                                     <th><?= $record ?> %</th>
                                 <?php endif; ?>
