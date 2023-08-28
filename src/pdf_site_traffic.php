@@ -40,7 +40,7 @@ function record_weekly($array_week, $array_lweek)
 }
 /* #endregion */
 
-/* #region function to get the max and min total of recordsne */
+/* #region function to get the max and min total of records */
 function get_max_min($acquisition_data_array)
 {
     $new_data_array = array();
@@ -56,15 +56,27 @@ function get_max_min($acquisition_data_array)
 }
 /* #endregion */
 
-/* #region Percent of each user acquisition day */
-$p_total_daily = [-0.73, 58.42, 15.66, -7.06, -15.63, 60.13, -18.44];
-$p_paid_search = [0, 47.83, 12.77, -23.08, 50, -1.1, -43.24];
-$p_direct = [-2.08, 46.43, 66.67, 15, -62.5, 43.9, -65.15];
-$p_organic_search = [-3.85, 48, -29.41, 20, 400, 2366.67, -48.48];
-$p_organic_social = [50, 1100, 66.67, 100, -33.33, 12.5, 660];
-$p_referral = [-100, 100, 0, -100, -100, 200, -50];
+/* #region Array per data range */
+
+/* #region Percent 16-22 August */
+// $p_total_daily = [-0.73, 58.42, 15.66, -7.06, -15.63, 60.13, -18.44];
+// $p_paid_search = [0, 47.83, 12.77, -23.08, 50, -1.1, -43.24];
+// $p_direct = [-2.08, 46.43, 66.67, 15, -62.5, 43.9, -65.15];
+// $p_organic_search = [-3.85, 48, -29.41, 20, 400, 2366.67, -48.48];
+// $p_organic_social = [50, 1100, 66.67, 100, -33.33, 12.5, 660];
+// $p_referral = [-100, 100, 0, -100, -100, 200, -50];
 /* #endregion */
 
+/* #region Percent 23-29 August */
+$p_total_daily = [-4.58, -34.5, -10.28, -26.97, -37.93];
+$p_paid_search = [-8.33, -30.99, -33.98, -76, -60];
+$p_direct = [5.45, -14.89, 20.69, 0, 0];
+$p_organic_search = [-13.33, -62.5, -18.75, -43.75, -58.33];
+$p_organic_social = [0, -27.27, 20, 50, -60];
+$p_referral = [0, -50, 400, -100, 0];
+/* #endregion */
+
+/* #endregion */
 
 
 /* #region data list (weekly) - 8/16/2023 */
@@ -140,9 +152,9 @@ $last_date = "08/09/2023 - 08/14/2023";
     </div>
     <div>
         <div style="width: 12px; height: 12px; background: <?= $cell_red ?>;"></div>
-        <p>less than 0% (negative)</p>
+        <p>less than -40% (negative)</p>
     </div>
-    
+
 
     <!-- <p style="font-size: 1.5rem;"><b>users: <?= $total_week ?></b></p>
     <p style="font-size: 1.5rem;"><b> users(last week): <?= $total_lastWeek ?></b></p> -->
@@ -164,7 +176,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <tbody>
                         <tr align="left">
                             <?php foreach ($p_total_daily as $record) : ?>
-                                <?php if ($record < 0) : ?>
+                                <?php if ($record < -40) : ?>
                                     <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
                                 <?php elseif ($record > 50) : ?>
                                     <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
@@ -191,7 +203,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <tbody>
                         <tr align="left">
                             <?php foreach ($p_paid_search as $record) : ?>
-                                <?php if ($record < 0) : ?>
+                                <?php if ($record < -40) : ?>
                                     <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
                                 <?php elseif ($record > 50) : ?>
                                     <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
@@ -218,7 +230,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <tbody>
                         <tr align="left">
                             <?php foreach ($p_direct as $record) : ?>
-                                <?php if ($record < 0) : ?>
+                                <?php if ($record < -40) : ?>
                                     <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
                                 <?php elseif ($record > 50) : ?>
                                     <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
@@ -245,7 +257,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <tbody>
                         <tr align="left">
                             <?php foreach ($p_organic_search as $record) : ?>
-                                <?php if ($record < 0) : ?>
+                                <?php if ($record < -40) : ?>
                                     <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
                                 <?php elseif ($record > 50) : ?>
                                     <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
@@ -272,7 +284,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <tbody>
                         <tr align="left">
                             <?php foreach ($p_organic_social as $record) : ?>
-                                <?php if ($record < 0) : ?>
+                                <?php if ($record < -40) : ?>
                                     <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
                                 <?php elseif ($record > 50) : ?>
                                     <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
@@ -299,7 +311,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <tbody>
                         <tr align="left">
                             <?php foreach ($p_referral as $record) : ?>
-                                <?php if ($record < 0) : ?>
+                                <?php if ($record < -40) : ?>
                                     <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
                                 <?php elseif ($record > 50) : ?>
                                     <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>

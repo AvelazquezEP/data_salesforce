@@ -1,5 +1,17 @@
 <?php
 
+function get_min($data_array)
+{
+    $min_array = array();
+    for ($i = 0; $i < count($data_array); $i++) {
+        if ($data_array[$i] < 0) {
+            array_push($min_array, $data_array[$i]);
+        }
+    }
+
+    return $min_array;
+}
+
 function get_max_min($acquisition_data_array)
 {
     $new_data_array = array();
@@ -14,21 +26,10 @@ function get_max_min($acquisition_data_array)
     return $new_data_array;
 }
 
-function get_min($data_array)
-{
-    $min_array = array();
-    for ($i = 0; $i < count($data_array); $i++) {
-        if ($data_array[$i] < 0) {
-            array_push($min_array, $data_array[$i]);
-        }
-    }
 
-    return $min_array;
-}
 
 function get_total_acquisition_min()
 {
-
 }
 
 /* #region Percent of each user acquisition per day */
@@ -40,7 +41,10 @@ $p_organic_social = [50, 1100, 66.67, 100, -33.33, 12.5, 660];
 $p_referral = [-100, 100, 0, -100, -100, 200, -50];
 /* #endregion */
 
-// echo count(get_max_min($p_total_daily)) . "<br />";
 var_dump(
     count(get_min(get_max_min($p_total_daily)))
+);
+echo "<br />";
+var_dump(
+    get_min(get_max_min($p_total_daily))
 );
