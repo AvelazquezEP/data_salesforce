@@ -5,7 +5,39 @@ session_start();
 $total = 0;
 $total_last_week = 0;
 
-/* #region Function to get the data conversion of the days */
+/* #region Array per data range */
+$week = [30, 31, 01, 02, 03, 04, 05];
+
+/* #region Percent 16-22 August */
+// $p_total_daily = [-0.73, 58.42, 15.66, -7.06, -15.63, 60.13, -18.44];
+// $p_paid_search = [0, 47.83, 12.77, -23.08, 50, -1.1, -43.24];
+// $p_direct = [-2.08, 46.43, 66.67, 15, -62.5, 43.9, -65.15];
+// $p_organic_search = [-3.85, 48, -29.41, 20, 400, 2366.67, -48.48];
+// $p_organic_social = [50, 1100, 66.67, 100, -33.33, 12.5, 660];
+// $p_referral = [-100, 100, 0, -100, -100, 200, -50];
+/* #endregion */
+
+/* #region Percent 23-29 August */
+// $p_total_daily = [-4.58, -34.5, -10.28, -26.97, -37.93, -68.38, -55.74];
+// $p_paid_search = [-8.33, -30.99, -33.98, -76, -60, -65.56, -12.12];
+// $p_direct = [5.45, -14.89, 20.69, 0, 0, -71.19, -46.58];
+// $p_organic_search = [-13.33, -62.5, -18.75, -43.75, -58.33, -51.85, -3.85];
+// $p_organic_social = [0, -27.27, 20, 50, -60, -98.65, -96.88];
+// $p_referral = [0, -50, 400, -100, 0, -100, 50];
+/* #endregion */
+
+/* #region Percent 30-05 August */
+$p_total_daily = [-6.85];
+$p_paid_search = [12.73];
+$p_direct = [-29.31];
+$p_organic_search = [7.69];
+$p_organic_social = [0];
+$p_referral = [-100];
+/* #endregion */
+
+/* #endregion */
+
+/* #region FUNCTIONS */
 
 /* #region function to daily record */
 function records_daily($main_array)
@@ -56,32 +88,13 @@ function get_max_min($acquisition_data_array)
 }
 /* #endregion */
 
-/* #region Array per data range */
-
-/* #region Percent 16-22 August */
-// $p_total_daily = [-0.73, 58.42, 15.66, -7.06, -15.63, 60.13, -18.44];
-// $p_paid_search = [0, 47.83, 12.77, -23.08, 50, -1.1, -43.24];
-// $p_direct = [-2.08, 46.43, 66.67, 15, -62.5, 43.9, -65.15];
-// $p_organic_search = [-3.85, 48, -29.41, 20, 400, 2366.67, -48.48];
-// $p_organic_social = [50, 1100, 66.67, 100, -33.33, 12.5, 660];
-// $p_referral = [-100, 100, 0, -100, -100, 200, -50];
 /* #endregion */
 
-/* #region Percent 23-29 August */
-$p_total_daily = [-4.58, -34.5, -10.28, -26.97, -37.93];
-$p_paid_search = [-8.33, -30.99, -33.98, -76, -60];
-$p_direct = [5.45, -14.89, 20.69, 0, 0];
-$p_organic_search = [-13.33, -62.5, -18.75, -43.75, -58.33];
-$p_organic_social = [0, -27.27, 20, 50, -60];
-$p_referral = [0, -50, 400, -100, 0];
-/* #endregion */
-
-/* #endregion */
-
+/* #region DATA LIST */
 
 /* #region data list (weekly) - 8/16/2023 */
 
-$week = [16, 17, 18, 19, 20, 21, 22];
+// $week = [16, 17, 18, 19, 20, 21, 22];
 $total_week = 498;
 
 $total_daily = [136, 160, 96, 79, 11, 1, 1];
@@ -122,6 +135,8 @@ $l_organic_social_data = records_daily($l_organic_social);
 $l_referral_data = records_daily($l_referral);
 /* #endregion */
 
+/* #endregion */
+
 // $bg_color = '#e2e2e2';
 $bg_color = '#fff';
 $cell_red = "#ff8f8f";
@@ -155,9 +170,6 @@ $last_date = "08/09/2023 - 08/14/2023";
         <p>less than -40% (negative)</p>
     </div>
 
-
-    <!-- <p style="font-size: 1.5rem;"><b>users: <?= $total_week ?></b></p>
-    <p style="font-size: 1.5rem;"><b> users(last week): <?= $total_lastWeek ?></b></p> -->
     <section style="margin-top: 2rem;">
 
         <section>
