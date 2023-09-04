@@ -27,12 +27,12 @@ $week = [30, 31, 01, 02, 03, 04, 05];
 /* #endregion */
 
 /* #region Percent 30-05 August */
-$p_total_daily = [-6.85];
-$p_paid_search = [12.73];
-$p_direct = [-29.31];
-$p_organic_search = [7.69];
-$p_organic_social = [0];
-$p_referral = [-100];
+$p_total_daily = [-6.85, 3.57, 5.21, -32.31, -57.58];
+$p_paid_search = [12.73, -4.08, 21.62, 166.67, 0];
+$p_direct = [-29.31, -22.5, -20, -81.82, -100];
+$p_organic_search = [7.69, 106.67, 84.62, 66.67, -33.33];
+$p_organic_social = [0, -50, -33.33, -33.33, -80];
+$p_referral = [-100, 200, -100, 0, -100];
 /* #endregion */
 
 /* #endregion */
