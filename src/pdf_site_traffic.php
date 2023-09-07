@@ -6,7 +6,7 @@ $total = 0;
 $total_last_week = 0;
 
 /* #region Array per data range */
-$week = [30, 31, 01, 02, 03, 04, 05];
+$week = [6, 7, 8, 9, 10, 11, 12];
 
 /* #region Percent 16-22 August */
 // $p_total_daily = [-0.73, 58.42, 15.66, -7.06, -15.63, 60.13, -18.44];
@@ -27,13 +27,17 @@ $week = [30, 31, 01, 02, 03, 04, 05];
 /* #endregion */
 
 /* #region Percent 30-05 August */
-$p_total_daily = [-6.85, 3.57, 5.21, -32.31, -57.58, -44.52];
-$p_paid_search = [12.73, -4.08, 21.62, 166.67, 0, -24.36];
-$p_direct = [-29.31, -22.5, -20, -81.82, -100, -72.5];
-$p_organic_search = [7.69, 106.67, 84.62, 66.67, -33.33, -59.09];
-$p_organic_social = [0, -50, -33.33, -33.33, -80, -50];
-$p_referral = [-100, 200, -100, 0, -100, 0];
+$p_total_daily = [-6.85, 3.57, 5.21, -32.31, -57.58, -44.52, -15.82];
+$p_paid_search = [12.73, -4.08, 21.62, 166.67, 0, -24.36, -37.93];
+$p_direct = [-29.31, -22.5, -20, -81.82, -100, -72.5, 23.08];
+$p_organic_search = [7.69, 106.67, 84.62, 66.67, -33.33, -59.09, 8];
+$p_organic_social = [0, -50, -33.33, -33.33, -80, -50, -40];
+$p_referral = [-100, 200, -100, 0, -100, 0, -66.67];
 /* #endregion */
+
+/* #region Percent 06-12 August */
+
+/*  */
 
 /* #endregion */
 
@@ -160,7 +164,7 @@ $last_date = "08/09/2023 - 08/14/2023";
 <body style="font-size: 1.5rem;">
 
     <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">User acquisition</h1>
-    <p style="font-size: 1.5rem; text-align: center;"><b>08/16/2022</b> - <b>08/22/2023</b></p>
+    <p style="font-size: 1.5rem; text-align: center;"><b>08/30/2022</b> - <b>09/05/2023</b></p>
     <div>
         <div style="width: 12px; height: 12px; background: <?= $cell_green ?>;"></div>
         <p>More than 50% (positive)</p>
