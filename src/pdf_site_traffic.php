@@ -8,7 +8,7 @@ $total_last_week = 0;
 /* #region Array per data range */
 // 18-23 // 1-6 
 // 24-30 // 7-13
-$week = ['First week', 'Second week'];
+$week = [13, 14, 15, 16, 17, 18, 19];
 
 /* #region OLD DATE */
 /* #region Percent 16-22 August */
@@ -37,16 +37,25 @@ $week = ['First week', 'Second week'];
 // $p_organic_social = [0, -50, -33.33, -33.33, -80, -50, -40];
 // $p_referral = [-100, 200, -100, 0, -100, 0, -66.67];
 /* #endregion */
-/* #endregion */
 
 /* #region Percent 06-12 August */
-$p_total_daily = [91.52, 27.66];
-$p_paid_search = [31.58, 27.49];
-$p_direct = [111.57, 52.94];
-$p_organic_search = [22.11, 6.48];
-$p_organic_social = [769.43, 30];
-$p_referral = [133.33, 200];
+// $p_total_daily = [91.52, 27.66];
+// $p_paid_search = [31.58, 27.49];
+// $p_direct = [111.57, 52.94];
+// $p_organic_search = [22.11, 6.48];
+// $p_organic_social = [769.43, 30];
+// $p_referral = [133.33, 200];
 /* #endregion */
+/* #endregion */
+
+/* #region 13-19 September */
+$p_total_daily = [-56.52];
+$p_paid_search = [-70.59];
+$p_direct = [-44.83];
+$p_organic_search = [-66.67];
+$p_organic_social = [-85.71];
+$p_referral = [-80];
+/*  */
 
 /* #region FUNCTIONS */
 
@@ -194,8 +203,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <!-- <th>08/<?= $day ?>/2023</th> -->
-                                <th><?= $day ?></th>
+                                <th>09/<?= $day ?>/2023</th>
                             <?php endforeach; ?>
                         </tr>
                     </thead>
@@ -222,8 +230,8 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <!-- <th>08/<?= $day ?>/2023</th> -->
-                                <th><?= $day ?></th>
+                                <th>09/<?= $day ?>/2023</th>
+                                <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
                     </thead>
@@ -250,8 +258,8 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <!-- <th>08/<?= $day ?>/2023</th> -->
-                                <th><?= $day ?></th>
+                                <th>09/<?= $day ?>/2023</th>
+                                <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
                     </thead>
@@ -278,8 +286,8 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <!-- <th>08/<?= $day ?>/2023</th> -->
-                                <th><?= $day ?></th>
+                                <th>09/<?= $day ?>/2023</th>
+                                <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
                     </thead>
@@ -306,8 +314,8 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <!-- <th>08/<?= $day ?>/2023</th> -->
-                                <th><?= $day ?></th>
+                                <th>09/<?= $day ?>/2023</th>
+                                <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
                     </thead>
@@ -329,13 +337,13 @@ $last_date = "08/09/2023 - 08/14/2023";
 
             <!-- User acquisition - Referral -->
             <div style="background-color: <?= $bg_color ?>">
-                <p> <strong> Referral: </strong></p>
+                <p><strong> Referral: </strong></p>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <!-- <th>08/<?= $day ?>/2023</th> -->
-                                <th><?= $day ?></th>
+                                <th>09/<?= $day ?>/2023</th>
+                                <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
                     </thead>
