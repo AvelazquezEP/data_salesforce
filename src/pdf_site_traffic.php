@@ -49,12 +49,12 @@ $week = [13, 14, 15, 16, 17, 18, 19];
 /* #endregion */
 
 /* #region 13-19 September */
-$p_total_daily = [-56.52];
-$p_paid_search = [-70.59];
-$p_direct = [-44.83];
-$p_organic_search = [-66.67];
-$p_organic_social = [-85.71];
-$p_referral = [-80];
+$p_total_daily = [-56.52, 2.27, 6.54, -10.42, -34.29,];
+$p_paid_search = [-70.59, 1.43, 29.79, 24.14, -45.45];
+$p_direct = [-44.83, 0, -34.38, -38.78, -50];
+$p_organic_search = [-66.67, 18.18, 5, -31.25, -50];
+$p_organic_social = [-85.71, -28.57, 12.5, 150, -100];
+$p_referral = [-80, 100, 0, 300, 0];
 /*  */
 
 /* #region FUNCTIONS */
@@ -222,7 +222,6 @@ $last_date = "08/09/2023 - 08/14/2023";
                     </tbody>
                 </table>
             </div>
-            pero nuestro trafico de usuarios en general se mantiene positivo en todas las lineas
             <!-- User acquisition - Paid Search -->
             <div style="background-color: <?= $bg_color ?>">
                 <p> <strong> Paid Search: </strong></p>
