@@ -58,13 +58,13 @@ $week = [20, 21, 22, 23, 24, 25, 26];
 
 /* #endregion */
 
-/* #region 13-19 September */
-$p_total_daily = [11.27];
-$p_paid_search = [-8.96];
-$p_direct = [45.24];
-$p_organic_search = [34.78];
-$p_organic_social = [-12.5];
-$p_referral = [-100];
+/* #region 20-26 September */
+$p_total_daily = [11.27, -50.37];
+$p_paid_search = [-8.96, -69.01];
+$p_direct = [45.24, -46.88];
+$p_organic_search = [34.78, -46.15];
+$p_organic_social = [-12.5, -80];
+$p_referral = [-100, -100];
 /* #endregion */
 
 /* #region FUNCTIONS */
