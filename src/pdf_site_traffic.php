@@ -59,12 +59,12 @@ $week = [20, 21, 22, 23, 24, 25, 26];
 /* #endregion */
 
 /* #region 20-26 September */
-$p_total_daily = [11.27, -50.37, -11.4, 2.33, -71.43, -27.82];
-$p_paid_search = [-8.96, -69.01, -21.31, -47.22, -100, -56.52];
-$p_direct = [45.24, -46.88, 28.57, 60, -68.75, -32.35];
-$p_organic_search = [34.78, -46.15, 0, -47.22, -28.57, -40.91];
-$p_organic_social = [-12.5, -80, -55.56, -40, -100, 0];
-$p_referral = [-100, -100, 0, -100, -100, -66.67];
+$p_total_daily = [11.27, -50.37, -11.4, 2.33, -71.43, -27.82, -28.3];
+$p_paid_search = [-8.96, -69.01, -21.31, -47.22, -100, -56.52, -66.67];
+$p_direct = [45.24, -46.88, 28.57, 60, -68.75, -32.35, -33.33];
+$p_organic_search = [34.78, -46.15, 0, -47.22, -28.57, -40.91, -26.09];
+$p_organic_social = [-12.5, -80, -55.56, -40, -100, 0, -60];
+$p_referral = [-100, -100, 0, -100, -100, -66.67, 0];
 /* #endregion */
 
 /* #region FUNCTIONS */
@@ -190,7 +190,7 @@ $last_date = "08/09/2023 - 08/14/2023";
 <body style="font-size: 1.5rem;">
 
     <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">User acquisition</h1>
-    <p style="font-size: 1.5rem; text-align: center;"><b>13/09/2023</b> - <b>19/09/2023</b></p>
+    <p style="font-size: 1.5rem; text-align: center;"><b>20/09/2023</b> - <b>26/09/2023</b></p>
     <!-- <p style="font-size: 1.5rem; text-align: center;">First week: <b>18-23 Aug</b> // <b>1-6 Sep</b> - Second week: <b>24-30 Aug</b> // <b>7-13 Sep</p> -->
     <!-- <p style="font-size: 1.5rem; text-align: center;">Second week: <b>24-30 Aug</b> // <b>7-13 Sep</b></p> -->
     <div>
