@@ -8,71 +8,18 @@ $total_last_week = 0;
 /* #region Array per data range */
 // 18-23 // 1-6 
 // 24-30 // 7-13
-$week = [26, 27, 28, 29, 30, 01, 02];
-
-/* #region OLD DATE */
-/* #region Percent 16-22 August */
-// $p_total_daily = [-0.73, 58.42, 15.66, -7.06, -15.63, 60.13, -18.44];
-// $p_paid_search = [0, 47.83, 12.77, -23.08, 50, -1.1, -43.24];
-// $p_direct = [-2.08, 46.43, 66.67, 15, -62.5, 43.9, -65.15];
-// $p_organic_search = [-3.85, 48, -29.41, 20, 400, 2366.67, -48.48];
-// $p_organic_social = [50, 1100, 66.67, 100, -33.33, 12.5, 660];
-// $p_referral = [-100, 100, 0, -100, -100, 200, -50];
-/* #endregion */
-
-/* #region Percent 23-29 August */
-// $p_total_daily = [-4.58, -34.5, -10.28, -26.97, -37.93, -68.38, -55.74];
-// $p_paid_search = [-8.33, -30.99, -33.98, -76, -60, -65.56, -12.12];
-// $p_direct = [5.45, -14.89, 20.69, 0, 0, -71.19, -46.58];
-// $p_organic_search = [-13.33, -62.5, -18.75, -43.75, -58.33, -51.85, -3.85];
-// $p_organic_social = [0, -27.27, 20, 50, -60, -98.65, -96.88];
-// $p_referral = [0, -50, 400, -100, 0, -100, 50];
-/* #endregion */
-
-/* #region Percent 30-05 August */
-// $p_total_daily = [-6.85, 3.57, 5.21, -32.31, -57.58, -44.52, -15.82];
-// $p_paid_search = [12.73, -4.08, 21.62, 166.67, 0, -24.36, -37.93];
-// $p_direct = [-29.31, -22.5, -20, -81.82, -100, -72.5, 23.08];
-// $p_organic_search = [7.69, 106.67, 84.62, 66.67, -33.33, -59.09, 8];
-// $p_organic_social = [0, -50, -33.33, -33.33, -80, -50, -40];
-// $p_referral = [-100, 200, -100, 0, -100, 0, -66.67];
-/* #endregion */
-
-/* #region Percent 06-12 August */
-// $p_total_daily = [91.52, 27.66];
-// $p_paid_search = [31.58, 27.49];
-// $p_direct = [111.57, 52.94];
-// $p_organic_search = [22.11, 6.48];
-// $p_organic_social = [769.43, 30];
-// $p_referral = [133.33, 200];
-/* #endregion */
-
-/* #region 13-19 September */
-// $p_total_daily = [-56.52, 2.27, 6.54, -10.42, -34.29, -48.09, -52.14];
-// $p_paid_search = [-70.59, 1.43, 29.79, 24.14, -45.45, -73.53, -67.19];
-// $p_direct = [-44.83, 0, -34.38, -38.78, -50, -51.85, -54.29];
-// $p_organic_search = [-66.67, 18.18, 5, -31.25, -50, -57.14, -48.48];
-// $p_organic_social = [-85.71, -28.57, 12.5, 150, -100, -83.33, -75];
-// $p_referral = [-80, 100, 0, 300, 0, 50, -100];
-/* #endregion */
-
-/* #region 20-26 September */
-// $p_total_daily = [11.27, -50.37, -11.4, 2.33, -71.43, -27.82, -28.3];
-// $p_paid_search = [-8.96, -69.01, -21.31, -47.22, -100, -56.52, -66.67];
-// $p_direct = [45.24, -46.88, 28.57, 60, -68.75, -32.35, -33.33];
-// $p_organic_search = [34.78, -46.15, 0, -47.22, -28.57, -40.91, -26.09];
-// $p_organic_social = [-12.5, -80, -55.56, -40, -100, 0, -60];
-// $p_referral = [-100, -100, 0, -100, -100, -66.67, 0];
-/* #endregion */
-/* #endregion */
+$week_1 = ['August', 'September'];
+// $week_2 = ['August - 2nd Week', 'September - 2nd Week'];
+// $week_3 = ['August - 3rd Week', 'September - 3rd Week'];
+// $week_4 = ['August - 4th Week', 'September - 4th Week'];
 
 /* #region 26 September - 02 October*/
-$p_total_daily = [9.43, -18.99, -40.16, -6.3, 6.82, 36.84];
-$p_paid_search = [-28.57, -26.23, -61.67, -14.58, 94.74, 100];
-$p_direct = [58.33, -21.31, -36.67, -33.33, -16.66, 0];
-$p_organic_search = [-8.7, -22.58, -29.17, 23.81, -16.67, 11.11];
-$p_organic_social = [40, 14.29, -85.71, 50, -33.33, 200];
-$p_referral = [0, 0, 0, 200, 0, 0];
+$p_total_daily = [-9.49, 28.28];
+$p_paid_search = [-4.29, 15.36];
+$p_direct = [4.69, 40.31];
+$p_organic_search = [-9.22, 19.58];
+$p_organic_social = [-87.06, 125.17];
+$p_referral = [12.82, -13.33];
 /* #endregion */
 /* #region FUNCTIONS */
 
@@ -197,7 +144,8 @@ $last_date = "08/09/2023 - 08/14/2023";
 <body style="font-size: 1.5rem;">
 
     <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">User acquisition</h1>
-    <p style="font-size: 1.5rem; text-align: center;"><b>20/09/2023</b> - <b>26/09/2023</b></p>
+    <p style="font-size: 1.5rem; text-align: center;"><b>Monthly report</b></p>
+    <p style="font-size: 1.5rem; text-align: center;"><b>August</b> - <b>September</b></p>
     <!-- <p style="font-size: 1.5rem; text-align: center;">First week: <b>18-23 Aug</b> // <b>1-6 Sep</b> - Second week: <b>24-30 Aug</b> // <b>7-13 Sep</p> -->
     <!-- <p style="font-size: 1.5rem; text-align: center;">Second week: <b>24-30 Aug</b> // <b>7-13 Sep</b></p> -->
     <div>
@@ -214,13 +162,13 @@ $last_date = "08/09/2023 - 08/14/2023";
         <section>
             <!-- User acquisition - Total users -->
             <div style="background-color: <?= $bg_color ?>">
-                <p> <strong>Total Daily: </strong></p>
+                <p> <strong>Total weekly: </strong></p>
                 <!-- <small><?= $actual_date ?></small> -->
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
-                            <?php foreach ($week as $day) : ?>
-                                <th>09/<?= $day ?>/2023</th>
+                            <?php foreach ($week_1 as $day) : ?>
+                                <th><?= $day ?></th>
                             <?php endforeach; ?>
                         </tr>
                     </thead>
@@ -239,14 +187,15 @@ $last_date = "08/09/2023 - 08/14/2023";
                     </tbody>
                 </table>
             </div>
+
             <!-- User acquisition - Paid Search -->
             <div style="background-color: <?= $bg_color ?>">
                 <p> <strong> Paid Search: </strong></p>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
-                            <?php foreach ($week as $day) : ?>
-                                <th>09/<?= $day ?>/2023</th>
+                            <?php foreach ($week_1 as $day) : ?>
+                                <th><?= $day ?></th>
                                 <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
@@ -273,8 +222,8 @@ $last_date = "08/09/2023 - 08/14/2023";
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
-                            <?php foreach ($week as $day) : ?>
-                                <th>09/<?= $day ?>/2023</th>
+                            <?php foreach ($week_1 as $day) : ?>
+                                <th><?= $day ?></th>
                                 <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
@@ -297,12 +246,12 @@ $last_date = "08/09/2023 - 08/14/2023";
 
             <!-- User acquisition - Organic Search -->
             <div style="background-color: <?= $bg_color ?>">
-                <p> <strong> Organic Search: </strong></p>
+                <p> <strong> Organic search: </strong></p>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
-                            <?php foreach ($week as $day) : ?>
-                                <th>09/<?= $day ?>/2023</th>
+                            <?php foreach ($week_1 as $day) : ?>
+                                <th><?= $day ?></th>
                                 <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
@@ -329,8 +278,8 @@ $last_date = "08/09/2023 - 08/14/2023";
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
-                            <?php foreach ($week as $day) : ?>
-                                <th>09/<?= $day ?>/2023</th>
+                            <?php foreach ($week_1 as $day) : ?>
+                                <th><?= $day ?></th>
                                 <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
@@ -350,38 +299,6 @@ $last_date = "08/09/2023 - 08/14/2023";
                     </tbody>
                 </table>
             </div>
-
-            <!-- User acquisition - Referral -->
-            <div style="background-color: <?= $bg_color ?>">
-                <p><strong> Referral: </strong></p>
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr class="active">
-                            <?php foreach ($week as $day) : ?>
-                                <th>09/<?= $day ?>/2023</th>
-                                <!-- <th><?= $day ?></th> -->
-                            <?php endforeach; ?>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr align="left">
-                            <?php foreach ($p_referral as $record) : ?>
-                                <?php if ($record < -40) : ?>
-                                    <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
-                                <?php elseif ($record > 50) : ?>
-                                    <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
-                                <?php else : ?>
-                                    <th><?= $record ?> %</th>
-                                <?php endif; ?>
-                            <?php endforeach; ?>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-        </section>
-        <br>
-
 </body>
 
 </html>
