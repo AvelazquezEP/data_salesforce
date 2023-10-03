@@ -64,16 +64,27 @@ $week = [26, 27, 28, 29, 30, 01, 02];
 // $p_organic_social = [-12.5, -80, -55.56, -40, -100, 0, -60];
 // $p_referral = [-100, -100, 0, -100, -100, -66.67, 0];
 /* #endregion */
+
+/* #region 26 September - 02 October*/
+// $p_total_daily = [9.43, -18.99, -40.16, -6.3, 6.82, 36.84, -53.02];
+// $p_paid_search = [-28.57, -26.23, -61.67, -14.58, 94.74, 100, -100];
+// $p_direct = [58.33, -21.31, -36.67, -33.33, -16.66, 0, -63.27];
+// $p_organic_search = [-8.7, -22.58, -29.17, 23.81, -16.67, 11.11, 50];
+// $p_organic_social = [40, 14.29, -85.71, 50, -33.33, 200, -83.33];
+// $p_referral = [0, 0, 0, 200, 0, 0, -66.67];
+/* #endregion */
+
 /* #endregion */
 
 /* #region 26 September - 02 October*/
-$p_total_daily = [9.43, -18.99, -40.16, -6.3, 6.82, 36.84];
-$p_paid_search = [-28.57, -26.23, -61.67, -14.58, 94.74, 100];
-$p_direct = [58.33, -21.31, -36.67, -33.33, -16.66, 0];
-$p_organic_search = [-8.7, -22.58, -29.17, 23.81, -16.67, 11.11];
-$p_organic_social = [40, 14.29, -85.71, 50, -33.33, 200];
-$p_referral = [0, 0, 0, 200, 0, 0];
+$p_total_daily = [];
+$p_paid_search = [];
+$p_direct = [];
+$p_organic_search = [];
+$p_organic_social = [];
+$p_referral = [];
 /* #endregion */
+
 /* #region FUNCTIONS */
 
 /* #region function to daily record */
@@ -197,7 +208,7 @@ $last_date = "08/09/2023 - 08/14/2023";
 <body style="font-size: 1.5rem;">
 
     <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">User acquisition</h1>
-    <p style="font-size: 1.5rem; text-align: center;"><b>20/09/2023</b> - <b>26/09/2023</b></p>
+    <p style="font-size: 1.5rem; text-align: center;"><b>26/09/2023</b> - <b>02/10/2023</b></p>
     <!-- <p style="font-size: 1.5rem; text-align: center;">First week: <b>18-23 Aug</b> // <b>1-6 Sep</b> - Second week: <b>24-30 Aug</b> // <b>7-13 Sep</p> -->
     <!-- <p style="font-size: 1.5rem; text-align: center;">Second week: <b>24-30 Aug</b> // <b>7-13 Sep</b></p> -->
     <div>

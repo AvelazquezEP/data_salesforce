@@ -298,6 +298,7 @@ $last_date = "08/09/2023 - 08/14/2023";
             </div>
 
             <!-- User acquisition - Referral -->
+
             <div style="background-color: <?= $bg_color ?>">
                 <p><strong> Referral: </strong></p>
                 <table class="table table-bordered table-striped">
