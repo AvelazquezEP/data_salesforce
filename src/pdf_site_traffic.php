@@ -8,9 +8,10 @@ $total_last_week = 0;
 /* #region Array per data range */
 // 18-23 // 1-6 
 // 24-30 // 7-13
-$week = [26, 27, 28, 29, 30, 01, 02];
+$week = [03, 04, 05, 06, 07, 8, 9];
 
 /* #region OLD DATE */
+
 /* #region Percent 16-22 August */
 // $p_total_daily = [-0.73, 58.42, 15.66, -7.06, -15.63, 60.13, -18.44];
 // $p_paid_search = [0, 47.83, 12.77, -23.08, 50, -1.1, -43.24];
@@ -77,12 +78,12 @@ $week = [26, 27, 28, 29, 30, 01, 02];
 /* #endregion */
 
 /* #region 26 September - 02 October*/
-$p_total_daily = [];
-$p_paid_search = [];
-$p_direct = [];
-$p_organic_search = [];
-$p_organic_social = [];
-$p_referral = [];
+$p_total_daily = [-77.59];
+$p_paid_search = [-100];
+$p_direct = [-100];
+$p_organic_search = [-61.9];
+$p_organic_social = [-100];
+$p_referral = [-100];
 /* #endregion */
 
 /* #region FUNCTIONS */
