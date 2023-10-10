@@ -162,21 +162,49 @@ $last_date = "08/09/2023 - 08/14/2023";
                 </table>
             </div>
 
-            <!-- User acquisition - Organic Social -->
+            <!-- NO SHOW -->
             <div style="background-color: <?= $bg_color ?>">
-                <p> <strong> Organic Social: </strong></p>
+                <p> <strong>NO SHOW: </strong></p>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <th>09/<?= $day ?>/2023</th>
+                                <th><?= $day ?></th>
                                 <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
                     </thead>
                     <tbody>
                         <tr align="left">
-                            <?php foreach ($p_organic_social as $record) : ?>
+                            <?php foreach ($no_show as $record) : ?>
+                                <?php if ($record < -40) : ?>
+                                    <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?></th>
+                                <?php elseif ($record > 50) : ?>
+                                    <th style="background-color: <?= $cell_green ?>"><?= $record ?></th>
+                                <?php else : ?>
+                                    <th><?= $record ?></th>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- LTFU NURTURING -->
+            <div style="background-color: <?= $bg_color ?>">
+                <p><strong>LTFU Nurturing: </strong></p>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr class="active">
+                            <?php foreach ($week as $day) : ?>
+                                <th><?= $day ?></th>
+                                <!-- <th><?= $day ?></th> -->
+                            <?php endforeach; ?>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr align="left">
+                            <?php foreach ($ltfu_nurturing as $record) : ?>
                                 <?php if ($record < -40) : ?>
                                     <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
                                 <?php elseif ($record > 50) : ?>
@@ -190,27 +218,59 @@ $last_date = "08/09/2023 - 08/14/2023";
                 </table>
             </div>
 
-            <!-- User acquisition - Referral -->
+            <br>
+            <br>
+            <br>
+
+            <!-- CANCELLED -->
             <div style="background-color: <?= $bg_color ?>">
-                <p><strong> Referral: </strong></p>
+                <p><strong>CANCELLED </strong></p>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <th>09/<?= $day ?>/2023</th>
+                                <th><?= $day ?></th>
                                 <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
                     </thead>
                     <tbody>
                         <tr align="left">
-                            <?php foreach ($p_referral as $record) : ?>
+                            <?php foreach ($cancelled as $record) : ?>
                                 <?php if ($record < -40) : ?>
-                                    <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
+                                    <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?></th>
                                 <?php elseif ($record > 50) : ?>
-                                    <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
+                                    <th style="background-color: <?= $cell_green ?>"><?= $record ?></th>
                                 <?php else : ?>
-                                    <th><?= $record ?> %</th>
+                                    <th><?= $record ?></th>
+                                <?php endif; ?>
+                            <?php endforeach; ?>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- FU Set  -->
+            <div style="background-color: <?= $bg_color ?>">
+                <p><strong>FU SET:</strong></p>
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr class="active">
+                            <?php foreach ($week as $day) : ?>
+                                <th><?= $day ?></th>
+                                <!-- <th><?= $day ?></th> -->
+                            <?php endforeach; ?>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr align="left">
+                            <?php foreach ($fu_set  as $record) : ?>
+                                <?php if ($record < -40) : ?>
+                                    <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?></th>
+                                <?php elseif ($record > 50) : ?>
+                                    <th style="background-color: <?= $cell_green ?>"><?= $record ?></th>
+                                <?php else : ?>
+                                    <th><?= $record ?></th>
                                 <?php endif; ?>
                             <?php endforeach; ?>
                         </tr>
