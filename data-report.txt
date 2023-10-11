@@ -1,0 +1,13 @@
+--EP-LA-Radio.Viva
+TOTAL LEADS: 5094
+DATA LEADSOURCE (July to recent data):
+1.- EP-LA-Radio.Viva:	694.5 <-- callrail
+2.- EP-LA-Radio.Viva:	525 <-- FROM DATABASE SALESFORCE
+3.- Appointment set: 341  (ONLY 69 20-scheduled) // (65-Cancelled Consult, 20-Scheduled, 60-Missed Consult)
+4.- DNR: 21 (4 - EP-LA-Radio.Viva)
+5.- No show (60-Missed Consult): 68
+6.- 0
+7.- 65-Cancelled Consult:	1
+8.- FU SET: 36
+	- 45-Follow UP Scheduled (Additional Contract, Employment based, Initial Consult)
+	- 45-Follow UP Missed Cancelled
