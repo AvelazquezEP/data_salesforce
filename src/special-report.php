@@ -110,7 +110,7 @@ $last_date = "08/09/2023 - 08/14/2023";
             <!-- Appointment_set -->
             <div style="background-color: <?= $bg_color ?>">
                 <p> <strong>APPOINTMENT SET: </strong></p>
-                <p>All these belong to Leadsource <b?>EP-LA-Radio.Viva</b></p>
+                <p>All these belong to Leadsource <b>EP-LA-Radio.Viva</b></p>
                 <p><b>20-Scheduled: 69</b></p>
                 <p>50-Checked In: 203</p>
                 <p>60-Missed Consult: 68</p>
