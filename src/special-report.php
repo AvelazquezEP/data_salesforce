@@ -10,23 +10,21 @@ $total_last_week = 0;
 // 24-30 // 7-13
 $week = ['total'];
 
-/* #region  */
-$call_rail = [701.5	];
-$leads_salesforce = [525];
-$appointment_set = [341];
-$dnr = [21];
-$no_show = [68];
-$ltfu_nurturing = [0];
-$cancelled = [1];
-$fu_set = [0];
+/* #region After July  */
+$call_rail = [545, 701.5];
+$leads_salesforce = [817, 525];
+$appointment_set = [528, 341];
+$dnr = [4, 21];
+$no_show = [60, 68];
+$ltfu_nurturing = [0, 0];
+$cancelled = [0, 1];
+$fu_set = [11, 0];
 /* #endregion */
 
 // $bg_color = '#e2e2e2';
 $bg_color = '#fff';
 // $cell_red = "#ff8f8f";
 // $cell_green = "#beecb9";
-$actual_date = "08/16/2023 - 08/22/2023";
-$last_date = "08/09/2023 - 08/14/2023";
 
 ?>
 
