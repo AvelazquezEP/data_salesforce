@@ -10,8 +10,8 @@ $total_last_week = 0;
 // 24-30 // 7-13
 $week = ['total'];
 
-/* #region 26 September - 02 October*/
-$call_rail = [694.5];
+/* #region  */
+$call_rail = [701.5	];
 $leads_salesforce = [525];
 $appointment_set = [341];
 $dnr = [21];
