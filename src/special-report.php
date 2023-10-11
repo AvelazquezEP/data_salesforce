@@ -52,7 +52,7 @@ $last_date = "08/09/2023 - 08/14/2023";
         <section>
             <!-- CALL RAIL -->
             <div style="background-color: <?= $bg_color ?>">
-                <p> <strong>Callrail (leads): </strong></p>
+                <p> <strong>CALLRAIL (leads): </strong></p>
                 <!-- <small><?= $actual_date ?></small> -->
                 <table class="table table-bordered table-striped">
                     <thead>
@@ -81,6 +81,7 @@ $last_date = "08/09/2023 - 08/14/2023";
             <!-- SALESFORCE LEAD -->
             <div style="background-color: <?= $bg_color ?>">
                 <p> <strong> SALESFORCE LEADS: </strong></p>
+                <p><b>5094</b> Leads created since July. <b>5%</b> are from Ep-la-Radio.viva</p>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
@@ -108,7 +109,12 @@ $last_date = "08/09/2023 - 08/14/2023";
 
             <!-- Appointment_set -->
             <div style="background-color: <?= $bg_color ?>">
-                <p> <strong>Appointment set: </strong></p>
+                <p> <strong>APPOINTMENT SET: </strong></p>
+                <p>All these belong to Leadsource <b?>EP-LA-Radio.Viva</b></p>
+                <p><b>20-Scheduled: 69</b></p>
+                <p>50-Checked In: 203</p>
+                <p>60-Missed Consult: 68</p>
+                <p>65-Cancelled Consult: 1</p>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
@@ -137,6 +143,15 @@ $last_date = "08/09/2023 - 08/14/2023";
             <!-- DNR -->
             <div style="background-color: <?= $bg_color ?>">
                 <p> <strong>DNR: </strong></p>
+                <p>Only 4 of this DNR they belong to <b>EP-LA-Radio.Viva</b></p>
+                <ul>
+                    <li>
+                        <a href="https://greencardla.lightning.force.com/lightning/r/Account/001Rg000001rvNpIAI/view">Lead 1 - </a>
+                        <a href="https://greencardla.lightning.force.com/lightning/r/Account/0015f00001nsatUAAQ/view">Lead 2 - </a>
+                        <a href="https://greencardla.lightning.force.com/lightning/r/Account/0015f00001vslamAAA/view">Lead 3 - </a>
+                        <a href="https://greencardla.lightning.force.com/lightning/r/Account/001Rg000000ThJJIA0/view">Lead 4</a>
+                    </li>
+                </ul>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
@@ -161,6 +176,10 @@ $last_date = "08/09/2023 - 08/14/2023";
                     </tbody>
                 </table>
             </div>
+
+            <br>
+            <br>
+            <br>
 
             <!-- NO SHOW -->
             <div style="background-color: <?= $bg_color ?>">
@@ -192,7 +211,8 @@ $last_date = "08/09/2023 - 08/14/2023";
 
             <!-- LTFU NURTURING -->
             <div style="background-color: <?= $bg_color ?>">
-                <p><strong>LTFU Nurturing: </strong></p>
+                <p><strong>LTFU NURTURING: </strong></p>
+                <p>There are no lead created with the Leadsource: <b>ep-la-radio.viva </b> and be of July</p>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
@@ -208,19 +228,15 @@ $last_date = "08/09/2023 - 08/14/2023";
                                 <?php if ($record < -40) : ?>
                                     <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
                                 <?php elseif ($record > 50) : ?>
-                                    <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
+                                    <th style="background-color: <?= $cell_green ?>"><?= $record ?></th>
                                 <?php else : ?>
-                                    <th><?= $record ?> %</th>
+                                    <th><?= $record ?></th>
                                 <?php endif; ?>
                             <?php endforeach; ?>
                         </tr>
                     </tbody>
                 </table>
             </div>
-
-            <br>
-            <br>
-            <br>
 
             <!-- CANCELLED -->
             <div style="background-color: <?= $bg_color ?>">
@@ -253,6 +269,21 @@ $last_date = "08/09/2023 - 08/14/2023";
             <!-- FU Set  -->
             <div style="background-color: <?= $bg_color ?>">
                 <p><strong>FU SET:</strong></p>
+                <p>The following are taken into account:</p>
+                <ul>
+                    <li>Follow UP Scheduled (Additional Contract, Employment based, Initial Consult)</li>
+                </ul>
+                <ul>
+                    <li>Follow UP Missed Cancelled</li>
+                </ul>
+                <p>Only 3 of this FU SET are from <b>EP-LA-Radio.Viva</b></p>
+                <ul>
+                    <li>
+                        <a target="_blank" href="https://greencardla.lightning.force.com/lightning/r/Opportunity/006Rg000000Wb7iIAC/view">Opportunity 1 - </a>
+                        <a target="_blank" href="https://greencardla.lightning.force.com/lightning/r/Opportunity/006Rg000001LlOPIA0/view">Opportunity 2 - </a>
+                        <a target="_blank" href="https://greencardla.lightning.force.com/lightning/r/Opportunity/0065f00000NY9ScAAL/view">Opportunity 3</a>
+                    </li>
+                </ul>
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
