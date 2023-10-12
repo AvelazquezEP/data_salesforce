@@ -85,7 +85,7 @@ $week = [10, 11, 12, 13, 14, 15, 16];
 /* #endregion */
 /* #endregion */
 
-/* #region 26 September - 02 October*/
+/* #region 10 October - 16 October*/
 $p_total_daily = [-21.01, -21.17];
 $p_paid_search = [-98.57, -98.44];
 $p_direct = [-53.66, 2.33];
