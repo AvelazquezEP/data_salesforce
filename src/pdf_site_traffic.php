@@ -86,12 +86,12 @@ $week = [10, 11, 12, 13, 14, 15, 16];
 /* #endregion */
 
 /* #region 10 October - 16 October*/
-$p_total_daily = [-21.01, -21.17];
-$p_paid_search = [-98.57, -98.44];
-$p_direct = [-53.66, 2.33];
-$p_organic_search = [154.55, 39.29];
-$p_organic_social = [-100, -100];
-$p_referral = [0, 0];
+$p_total_daily = [-21.01, -21.17, -17.69];
+$p_paid_search = [-98.57, -98.44, -98.36];
+$p_direct = [-53.66, 2.33, 26.32];
+$p_organic_search = [154.55, 39.29, 47.62];
+$p_organic_social = [-100, -100, -100];
+$p_referral = [0, 0, 0];
 /* #endregion */
 
 /* #region FUNCTIONS */
@@ -218,8 +218,6 @@ $last_date = "08/09/2023 - 08/14/2023";
 
     <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">User acquisition</h1>
     <p style="font-size: 1.5rem; text-align: center;"><b>03/10/2023</b> - <b>09/10/2023</b></p>
-    <!-- <p style="font-size: 1.5rem; text-align: center;">First week: <b>18-23 Aug</b> // <b>1-6 Sep</b> - Second week: <b>24-30 Aug</b> // <b>7-13 Sep</p> -->
-    <!-- <p style="font-size: 1.5rem; text-align: center;">Second week: <b>24-30 Aug</b> // <b>7-13 Sep</b></p> -->
     <div>
         <div style="width: 12px; height: 12px; background: <?= $cell_green ?>;"></div>
         <p>More than 50% (positive)</p>
