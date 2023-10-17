@@ -93,7 +93,6 @@ $week = [10, 11, 12, 13, 14, 15, 16];
 // $p_referral = [0, 0, 0, -33, -100, 0, 0];
 /* #endregion */
 /* #endregion */
-
 /* #region 10 October - 16 October*/
 $p_total_daily = [];
 $p_paid_search = [];
