@@ -95,12 +95,12 @@ $week = [17, 18, 19, 20, 21, 22, 23];
 /* #endregion */
 
 /* #region 17 October - 23 October*/
-$p_total_daily = [-32.56, -23.53];
-$p_paid_search = [-81.13, -83.18];
-$p_direct = [-14.29, 21.95];
-$p_organic_search = [21.05, 21.05];
-$p_organic_social = [-100, -50];
-$p_referral = [0, 0];
+$p_total_daily = [-32.56, -23.53, -14.12];
+$p_paid_search = [-81.13, -83.18, -78.64];
+$p_direct = [-14.29, 21.95, 30];
+$p_organic_search = [21.05, 21.05, 48];
+$p_organic_social = [-100, -50, 0];
+$p_referral = [0, 0, 0];
 /* #endregion */
 
 /* #region FUNCTIONS */
