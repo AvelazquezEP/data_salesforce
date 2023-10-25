@@ -8,7 +8,7 @@ $total_last_week = 0;
 /* #region Array per data range */
 // 18-23 // 1-6 
 // 24-30 // 7-13
-$week = [17, 18, 19, 20, 21, 22, 23];
+$week = [24, 25, 26, 27, 28, 29, 30];
 
 /* #region OLD DATE */
 
@@ -103,13 +103,13 @@ $week = [17, 18, 19, 20, 21, 22, 23];
 /* #endregion */
 /* #endregion */
 
-/* #region 17 October - 23 October*/
-$p_total_daily = [];
-$p_paid_search = [];
-$p_direct = [];
-$p_organic_search = [];
-$p_organic_social = [];
-$p_referral = [];
+/* #region 24 October - 30 October*/
+$p_total_daily = [-35.68];
+$p_paid_search = [-66.05];
+$p_direct = [6.67];
+$p_organic_search = [-50];
+$p_organic_social = [-33.33];
+$p_referral = [-100];
 /* #endregion */
 
 /* #region FUNCTIONS */
