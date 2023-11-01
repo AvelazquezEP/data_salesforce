@@ -8,7 +8,7 @@ $total_last_week = 0;
 /* #region Array per data range */
 // 18-23 // 1-6 
 // 24-30 // 7-13
-$week = [24, 25, 26, 27, 28, 29, 30];
+$week = [31, 01, 02, 03, 04, 05, 06];
 
 /* #region OLD DATE */
 
@@ -101,15 +101,24 @@ $week = [24, 25, 26, 27, 28, 29, 30];
 // $p_organic_social = [-100, -50, 0, -66.67, 50, -100, -87.5];
 // $p_referral = [0, 0, 0, -100, 0, 0, -100];
 /* #endregion */
-/* #endregion */
 
 /* #region 24 October - 30 October*/
-$p_total_daily = [-35.68, -45.33, -65.56, 22.78, 3.82, -15.79, -56.83];
-$p_paid_search = [-66.05, -81.05, -90.61, 33.33, 37.1, -45.45, -87.37];
-$p_direct = [6.67, -12.77, -46.97, -6.9, 37.1, 42.86, 25.49];
-$p_organic_search = [-50, -23.53, -33.33, 25, -30.77, -71.43, -57.89];
-$p_organic_social = [-33.33, -100, 0, -80, 0, -50, -66.67];
-$p_referral = [-100, 0, 0, 0, 0, 0, 0];
+// $p_total_daily = [-35.68, -45.33, -65.56, 22.78, 3.82, -15.79, -56.83];
+// $p_paid_search = [-66.05, -81.05, -90.61, 33.33, 37.1, -45.45, -87.37];
+// $p_direct = [6.67, -12.77, -46.97, -6.9, 37.1, 42.86, 25.49];
+// $p_organic_search = [-50, -23.53, -33.33, 25, -30.77, -71.43, -57.89];
+// $p_organic_social = [-33.33, -100, 0, -80, 0, -50, -66.67];
+// $p_referral = [-100, 0, 0, 0, 0, 0, 0];
+/* #endregion */
+/* #endregion */
+
+/* #region 31 October - 06 November*/
+$p_total_daily = [-68.49];
+$p_paid_search = [-86.19];
+$p_direct = [-59.09];
+$p_organic_search = [-79.17];
+$p_organic_social = [-100];
+$p_referral = [-50];
 /* #endregion */
 
 /* #region FUNCTIONS */
@@ -235,7 +244,7 @@ $last_date = "08/09/2023 - 08/14/2023";
 <body style="font-size: 1.5rem;">
 
     <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">User acquisition</h1>
-    <p style="font-size: 1.5rem; text-align: center;"><b>10/<?= $week[0] ?>/2023</b> - <b>10/<?= $week[6] ?>/2023</b></p>
+    <p style="font-size: 1.5rem; text-align: center;"><b><?= $week[0] ?>/10/2023</b> - <b><?= $week[6] ?>/11/2023</b></p>
     <div>
         <div style="width: 12px; height: 12px; background: <?= $cell_green ?>;"></div>
         <p>More than 50% (positive)</p>
