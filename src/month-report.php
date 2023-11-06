@@ -6,20 +6,18 @@ $total = 0;
 $total_last_week = 0;
 
 /* #region Array per data range */
-// 18-23 // 1-6 
-// 24-30 // 7-13
-$week_1 = ['August', 'September'];
+$week_1 = ['September', 'October'];
 // $week_2 = ['August - 2nd Week', 'September - 2nd Week'];
 // $week_3 = ['August - 3rd Week', 'September - 3rd Week'];
 // $week_4 = ['August - 4th Week', 'September - 4th Week'];
 
 /* #region 26 September - 02 October*/
-$p_total_daily = [-9.49, 28.28];
-$p_paid_search = [-4.29, 15.36];
-$p_direct = [4.69, 40.31];
-$p_organic_search = [-9.22, 19.58];
-$p_organic_social = [-87.06, 125.17];
-$p_referral = [12.82, -13.33];
+$p_total_daily = [-22.04, 71.2];
+$p_paid_search = [-13.31, 145.17];
+$p_direct = [-28.73, 28.09];
+$p_organic_search = [-16.38, -7.41];
+$p_organic_social = [-55.59, -37.09];
+$p_referral = [15.38, -46.67];
 /* #endregion */
 /* #region FUNCTIONS */
 

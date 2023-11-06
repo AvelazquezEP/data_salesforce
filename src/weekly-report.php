@@ -11,13 +11,21 @@ $total_last_week = 0;
 $week = ['1st Week', '2nd Week', '3rd Week', '4th Week'];
 
 /* #region 26 September - 02 October*/
-$p_total_daily = [25.96, -1.06, 28.73, 33.72];
-$p_paid_search = [6.94, -7.34, 12.24, 21.72];
-$p_direct = [91.39, 17.96, 38.57, 12.16];
-$p_organic_search = [27.59, 3.4, 23.48, -12.98];
-$p_organic_social = [-65.71, -59.46, 165.85, 516.13];
-$p_referral = [50, 0, -52.94, 9.09];
+// $p_total_daily = [-20.61, 1.08, -22.32, -33.46];
+// $p_paid_search = [-6.49, 7.93, -10.9, -33.33];
+// $p_direct = [-47.75, -15.93, -27.84, -20];
+// $p_organic_search = [-21.62, -3.29, -19.02, -11.05];
+// $p_organic_social = [191.67, 146.67, -62.39, -80.98];
+// $p_referral = [-33.33, 0, 112.5, -22.22];
+
+$p_total_daily = [16.67, 30.32, 86.18, 125.55];
+$p_paid_search = [10.73, 67.51, 176.72, 315.41];
+$p_direct = [42.38, 15.05, 38.57, 19.74];
+$p_organic_search = [9.48, -12.93, -7.58, -17.16];
+$p_organic_social = [-31.43, -48.65, -34.15, -35.9];
+$p_referral = [125, -54.55, -82.35, -50];
 /* #endregion */
+
 /* #region FUNCTIONS */
 
 /* #region function to daily record */
@@ -325,6 +333,193 @@ $last_date = "08/09/2023 - 08/14/2023";
                     </tbody>
                 </table>
             </div>
+
+            <!-- START NEW MONTH -->
+            <!-- #region OCTOBER -->
+            <p style="font-size: 1.5rem; text-align: center;"><b>September</b></p>
+            <!-- <p style="font-size: 1.5rem; text-align: center;">First week: <b>18-23 Aug</b> // <b>1-6 Sep</b> - Second week: <b>24-30 Aug</b> // <b>7-13 Sep</p> -->
+            <!-- <p style="font-size: 1.5rem; text-align: center;">Second week: <b>24-30 Aug</b> // <b>7-13 Sep</b></p> -->
+            <div>
+                <div style="width: 12px; height: 12px; background: <?= $cell_green ?>;"></div>
+                <p>More than 50% (positive)</p>
+            </div>
+            <div>
+                <div style="width: 12px; height: 12px; background: <?= $cell_red ?>;"></div>
+                <p>less than -40% (negative)</p>
+            </div>
+
+            <section style="margin-top: 2rem;">
+
+                <section>
+                    <!-- User acquisition - Total users -->
+                    <div style="background-color: <?= $bg_color ?>">
+                        <p> <strong>Total weekly: </strong></p>
+                        <!-- <small><?= $actual_date ?></small> -->
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr class="active">
+                                    <?php foreach ($week as $day) : ?>
+                                        <th><?= $day ?></th>
+                                    <?php endforeach; ?>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr align="left">
+                                    <?php foreach ($p_total_daily as $record) : ?>
+                                        <?php if ($record < -40) : ?>
+                                            <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
+                                        <?php elseif ($record > 50) : ?>
+                                            <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
+                                        <?php else : ?>
+                                            <th><?= $record ?> %</th>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- User acquisition - Paid Search -->
+                    <div style="background-color: <?= $bg_color ?>">
+                        <p> <strong> Paid Search: </strong></p>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr class="active">
+                                    <?php foreach ($week as $day) : ?>
+                                        <th><?= $day ?></th>
+                                        <!-- <th><?= $day ?></th> -->
+                                    <?php endforeach; ?>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr align="left">
+                                    <?php foreach ($p_paid_search as $record) : ?>
+                                        <?php if ($record < -40) : ?>
+                                            <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
+                                        <?php elseif ($record > 50) : ?>
+                                            <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
+                                        <?php else : ?>
+                                            <th><?= $record ?> %</th>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- User acquisition - Direct -->
+                    <div style="background-color: <?= $bg_color ?>">
+                        <p> <strong> Direct: </strong></p>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr class="active">
+                                    <?php foreach ($week as $day) : ?>
+                                        <th><?= $day ?></th>
+                                        <!-- <th><?= $day ?></th> -->
+                                    <?php endforeach; ?>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr align="left">
+                                    <?php foreach ($p_direct as $record) : ?>
+                                        <?php if ($record < -40) : ?>
+                                            <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
+                                        <?php elseif ($record > 50) : ?>
+                                            <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
+                                        <?php else : ?>
+                                            <th><?= $record ?> %</th>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- User acquisition - Organic Search -->
+                    <div style="background-color: <?= $bg_color ?>">
+                        <p> <strong> Organic search: </strong></p>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr class="active">
+                                    <?php foreach ($week as $day) : ?>
+                                        <th><?= $day ?></th>
+                                        <!-- <th><?= $day ?></th> -->
+                                    <?php endforeach; ?>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr align="left">
+                                    <?php foreach ($p_organic_search as $record) : ?>
+                                        <?php if ($record < -40) : ?>
+                                            <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
+                                        <?php elseif ($record > 50) : ?>
+                                            <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
+                                        <?php else : ?>
+                                            <th><?= $record ?> %</th>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- User acquisition - Organic Social -->
+                    <div style="background-color: <?= $bg_color ?>">
+                        <p> <strong> Organic Social: </strong></p>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr class="active">
+                                    <?php foreach ($week as $day) : ?>
+                                        <th><?= $day ?></th>
+                                        <!-- <th><?= $day ?></th> -->
+                                    <?php endforeach; ?>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr align="left">
+                                    <?php foreach ($p_organic_social as $record) : ?>
+                                        <?php if ($record < -40) : ?>
+                                            <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
+                                        <?php elseif ($record > 50) : ?>
+                                            <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
+                                        <?php else : ?>
+                                            <th><?= $record ?> %</th>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- User acquisition - Referral -->
+
+                    <div style="background-color: <?= $bg_color ?>">
+                        <p><strong> Referral: </strong></p>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr class="active">
+                                    <?php foreach ($week as $day) : ?>
+                                        <th><?= $day ?></th>
+                                        <!-- <th><?= $day ?></th> -->
+                                    <?php endforeach; ?>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr align="left">
+                                    <?php foreach ($p_referral as $record) : ?>
+                                        <?php if ($record < -40) : ?>
+                                            <th style="background-color: <?= $cell_red ?>; color:white;"><?= $record ?> %</th>
+                                        <?php elseif ($record > 50) : ?>
+                                            <th style="background-color: <?= $cell_green ?>"><?= $record ?> %</th>
+                                        <?php else : ?>
+                                            <th><?= $record ?> %</th>
+                                        <?php endif; ?>
+                                    <?php endforeach; ?>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
 </body>
 
 </html>
