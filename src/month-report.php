@@ -149,6 +149,7 @@ $last_date = "08/09/2023 - 08/14/2023";
     <div>
         <div style="width: 12px; height: 12px; background: <?= $cell_green ?>;"></div>
         <p>More than 50% (positive)</p>
+
     </div>
     <div>
         <div style="width: 12px; height: 12px; background: <?= $cell_red ?>;"></div>
