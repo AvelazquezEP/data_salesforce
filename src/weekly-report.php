@@ -9,6 +9,7 @@ $total_last_week = 0;
 // 18-23 // 1-6 
 // 24-30 // 7-13
 $week = ['1st Week', '2nd Week', '3rd Week', '4th Week'];
+$months = ['September', 'October'];
 
 /* #region 26 September - 02 October*/
 // $p_total_daily = [-20.61, 1.08, -22.32, -33.46];
@@ -174,6 +175,14 @@ $last_date = "08/09/2023 - 08/14/2023";
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
                                 <th><?= $day ?></th>
+
+                            <?php endforeach; ?>
+                        </tr>
+                        <tr class="active">
+                            <?php foreach ($week as $day) : ?>
+                                <?php foreach ($months as $month) : ?>
+                                    <th><?= $month ?></th>
+                                <?php endforeach; ?>
                             <?php endforeach; ?>
                         </tr>
                     </thead>
