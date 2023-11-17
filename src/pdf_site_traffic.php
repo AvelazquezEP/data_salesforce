@@ -131,12 +131,12 @@ $week = [14, 15, 16, 17, 18, 19, 20];
 /* #endregion */
 
 /* #region 07 October - 13 November*/
-$p_total_daily = [-39.61, -11.76];
-$p_paid_search = [-82.18, -25];
-$p_direct = [-7.14, 34];
-$p_organic_search = [-41.18, 4.17];
-$p_organic_social = [-88.89, -20];
-$p_referral = [0, 0];
+$p_total_daily = [-39.61, -11.76, -43.17];
+$p_paid_search = [-82.18, -25, -48.95];
+$p_direct = [-7.14, 34, 20.93];
+$p_organic_search = [-41.18, 4.17, -78.26];
+$p_organic_social = [-88.89, -20, -88.89];
+$p_referral = [0, 0, 0];
 /* #endregion */
 
 /* #region FUNCTIONS */
