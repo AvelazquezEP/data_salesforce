@@ -8,8 +8,8 @@ $total_last_week = 0;
 /* #region Array per data range */
 // 18-23 // 1-6 
 // 24-30 // 7-13
-$week = [14, 15, 16, 17, 18, 19, 20];
-
+$week = [21, 22, 23, 24, 25, 26, 27];
+$month = [11, 11];
 /* #region OLD DATE */
 
 /* #region Percent 16-22 August */
@@ -128,15 +128,24 @@ $week = [14, 15, 16, 17, 18, 19, 20];
 // $p_organic_social = [0, 0, 0, -25, -20, -50, -80];
 // $p_referral = [-100, 0, 0, 0, 0, 0];
 /* #endregion */
+
+/* #region 07 October - 13 November*/
+// $p_total_daily = [-39.61, -11.76, -43.17, -5.61, 35.34, 42.03, -55.09];
+// $p_paid_search = [-82.18, -25, -48.95, -11.84, 66.67, 92.11, -84];
+// $p_direct = [-7.14, 34, 20.93, 52, -4.44, -5.56, -18.75];
+// $p_organic_search = [-41.18, 4.17, -78.26, -18.75, 100, -27.27, 30];
+// $p_organic_social = [-88.89, -20, -88.89, -100, 25, -100, 33.33];
+// $p_referral = [0, 0, 0, 0, 0, 0, 0];
+/* #endregion */
 /* #endregion */
 
 /* #region 07 October - 13 November*/
-$p_total_daily = [-39.61, -11.76, -43.17];
-$p_paid_search = [-82.18, -25, -48.95];
-$p_direct = [-7.14, 34, 20.93];
-$p_organic_search = [-41.18, 4.17, -78.26];
-$p_organic_social = [-88.89, -20, -88.89];
-$p_referral = [0, 0, 0];
+$p_total_daily = [];
+$p_paid_search = [];
+$p_direct = [];
+$p_organic_search = [];
+$p_organic_social = [];
+$p_referral = [];
 /* #endregion */
 
 /* #region FUNCTIONS */
@@ -262,7 +271,7 @@ $last_date = "08/09/2023 - 08/14/2023";
 <body style="font-size: 1.5rem;">
 
     <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">User acquisition</h1>
-    <p style="font-size: 1.5rem; text-align: center;"><b><?= $week[0] ?>/10/2023</b> - <b><?= $week[6] ?>/11/2023</b></p>
+    <p style="font-size: 1.5rem; text-align: center;"><b><?= $week[0] ?>/<?= $month[0] ?>/2023</b> - <b><?= $week[6] ?>/<?= $month[1] ?>/2023</b></p>
     <div>
         <div style="width: 12px; height: 12px; background: <?= $cell_green ?>;"></div>
         <p>More than 50% (positive)</p>
