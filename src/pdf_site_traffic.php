@@ -149,12 +149,12 @@ $month = [11, 12];
 /* #endregion */
 
 /* #region 28 November - 27 November*/
-$p_total_daily = [];
-$p_paid_search = [];
-$p_direct = [];
-$p_organic_search = [];
-$p_organic_social = [];
-$p_referral = [];
+$p_total_daily = [-42.56];
+$p_paid_search = [-78.88];
+$p_direct = [-5];
+$p_organic_search = [23.08];
+$p_organic_social = [-42.86];
+$p_referral = [0];
 /* #endregion */
 
 /* #region FUNCTIONS */
