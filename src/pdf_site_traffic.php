@@ -8,8 +8,8 @@ $total_last_week = 0;
 /* #region Array per data range */
 // 18-23 // 1-6 
 // 24-30 // 7-13
-$week = [28, 29, 30, 01, 02, 03, 04];
-$month = [11, 12];
+$week = [05, 06, 07, 8, 9, 10, 11];
+$month = [12, 12];
 /* #region OLD DATE */
 
 /* #region Percent 16-22 August */
@@ -146,15 +146,24 @@ $month = [11, 12];
 // $p_organic_social = [-80, -25, -33.33, 0, -80, 0, -25];
 // $p_referral = [-66.67, -100, -100, 0, 0, -100, 0];
 /* #endregion */
+
+/* #region 28 November - 04 December*/
+// $p_total_daily = [-42.56, -49.17, -52.11, 15.47, 16.82, -18.37, -56.89];
+// $p_paid_search = [-78.88, -89.16, -80.25, 0.67, 1.25, -56, -90.63];
+// $p_direct = [-5, 15.09, 26.32, 117.65, 45, 42.86, 47.06];
+// $p_organic_search = [23.08, -25, 120, 9.09, 116.67, -75, -50];
+// $p_organic_social = [-42.86, -80, -75, 150, 0, -100, -83.33];
+// $p_referral = [0, -100, 0, 200, 0, 0, 100];
+/* #endregion */
 /* #endregion */
 
-/* #region 28 November - 27 November*/
-$p_total_daily = [-42.56, -49.17, -52.11];
-$p_paid_search = [-78.88, -89.16, -80.25];
-$p_direct = [-5, 15.09, 26.32];
-$p_organic_search = [23.08, -25, 120];
-$p_organic_social = [-42.86, -80, -75];
-$p_referral = [0, -100, 0];
+/* #region 28 November - 04 December*/
+$p_total_daily = [];
+$p_paid_search = [];
+$p_direct = [];
+$p_organic_search = [];
+$p_organic_social = [];
+$p_referral = [];
 /* #endregion */
 
 /* #region FUNCTIONS */
@@ -301,7 +310,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <th>10/<?= $day ?>/2023</th>
+                                <th>12/<?= $day ?>/2023</th>
                             <?php endforeach; ?>
                         </tr>
                     </thead>
@@ -327,7 +336,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <th>10/<?= $day ?>/2023</th>
+                                <th>12/<?= $day ?>/2023</th>
                                 <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
@@ -355,7 +364,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <th>10/<?= $day ?>/2023</th>
+                                <th>12/<?= $day ?>/2023</th>
                                 <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
@@ -383,7 +392,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <th>10/<?= $day ?>/2023</th>
+                                <th>12/<?= $day ?>/2023</th>
                                 <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
@@ -411,7 +420,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <th>10/<?= $day ?>/2023</th>
+                                <th>12/<?= $day ?>/2023</th>
                                 <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
@@ -439,7 +448,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <th>10/<?= $day ?>/2023</th>
+                                <th>12/<?= $day ?>/2023</th>
                                 <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>

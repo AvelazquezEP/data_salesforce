@@ -7,9 +7,6 @@ $total_last_week = 0;
 
 /* #region Array per data range */
 $week_1 = ['September', 'October'];
-// $week_2 = ['August - 2nd Week', 'September - 2nd Week'];
-// $week_3 = ['August - 3rd Week', 'September - 3rd Week'];
-// $week_4 = ['August - 4th Week', 'September - 4th Week'];
 
 /* #region 26 September - 02 October*/
 $p_total_daily = [-22.04, 71.2];
@@ -19,6 +16,7 @@ $p_organic_search = [-16.38, -7.41];
 $p_organic_social = [-55.59, -37.09];
 $p_referral = [15.38, -46.67];
 /* #endregion */
+
 /* #region FUNCTIONS */
 
 /* #region function to daily record */
