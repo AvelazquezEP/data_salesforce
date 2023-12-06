@@ -253,12 +253,12 @@ $p_referral = [-33.33, -50, 50, 100, 0, 0, 0];
 /* #endregion */
 
 /* #region 28 November - 04 December*/
-$p_total_daily = [-42.56, -49.17, -52.11, 15.47, 16.82, -18.37, -56.89];
-$p_paid_search = [-78.88, -89.16, -80.25, 0.67, 1.25, -56, -90.63];
-$p_direct = [-5, 15.09, 26.32, 117.65, 45, 42.86, 47.06];
-$p_organic_search = [23.08, -25, 120, 9.09, 116.67, -75, -50];
-$p_organic_social = [-42.86, -80, -75, 150, 0, -100, -83.33];
-$p_referral = [0, -100, 0, 200, 0, 0, 100];
+$p_total_daily = [-54.49];
+$p_paid_search = [-79.31];
+$p_direct = [-34.07];
+$p_organic_search = [-61.54];
+$p_organic_social = [-62.5];
+$p_referral = [0];
 /* #endregion */
 
 /* #region FUNCTIONS */
