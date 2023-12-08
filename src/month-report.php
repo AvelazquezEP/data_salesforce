@@ -8,12 +8,12 @@ $total_last_week = 0;
 /* #region Array per data range */
 $week_1 = ['October', 'November'];
 
-$p_total_daily = [];
-$p_paid_search = [];
-$p_direct = [];
-$p_organic_search = [];
-$p_organic_social = [];
-$p_referral = [];
+$p_total_daily = [71.2, 16.01];
+$p_paid_search = [145.17, 23.46];
+$p_direct = [28.09, 3.88];
+$p_organic_search = [-7.41, -10.47];
+$p_organic_social = [-37.09, 34.74];
+$p_referral = [-46.67, -16.67];
 
 /* #region October - November*/
 // october
