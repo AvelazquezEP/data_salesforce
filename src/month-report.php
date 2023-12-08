@@ -157,9 +157,7 @@ $last_date = "08/09/2023 - 08/14/2023";
 
     <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">User acquisition</h1>
     <p style="font-size: 1.5rem; text-align: center;"><b>Monthly report</b></p>
-    <p style="font-size: 1.5rem; text-align: center;"><b>August</b> - <b>September</b></p>
-    <!-- <p style="font-size: 1.5rem; text-align: center;">First week: <b>18-23 Aug</b> // <b>1-6 Sep</b> - Second week: <b>24-30 Aug</b> // <b>7-13 Sep</p> -->
-    <!-- <p style="font-size: 1.5rem; text-align: center;">Second week: <b>24-30 Aug</b> // <b>7-13 Sep</b></p> -->
+    <p style="font-size: 1.5rem; text-align: center;"><b>August</b> - <b>September</b></p>    
     <div>
         <div style="width: 12px; height: 12px; background: <?= $cell_green ?>;"></div>
         <p>More than 50% (positive)</p>
@@ -175,8 +173,7 @@ $last_date = "08/09/2023 - 08/14/2023";
         <section>
             <!-- User acquisition - Total users -->
             <div style="background-color: <?= $bg_color ?>">
-                <p> <strong>Total weekly: </strong></p>
-                <!-- <small><?= $actual_date ?></small> -->
+                <p> <strong>Total weekly: </strong></p>                
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr class="active">
