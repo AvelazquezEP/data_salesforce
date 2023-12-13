@@ -261,13 +261,13 @@ $p_referral = [-33.33, -50, 50, 100, 0, 0, 0];
 /* #endregion */
 /* #endregion */
 
-/* #region 05 December - 11 December */
-$p_total_daily = [];
-$p_paid_search = [];
-$p_direct = [];
-$p_organic_search = [];
-$p_organic_social = [];
-$p_referral = [];
+/* #region 12 December - 18 December */
+$p_total_daily = [-54.37];
+$p_paid_search = [-86.11];
+$p_direct = [11.54];
+$p_organic_search = [-34.78];
+$p_organic_social = [-83.33];
+$p_referral = [-100];
 /* #endregion */
 
 /* #region FUNCTIONS */
