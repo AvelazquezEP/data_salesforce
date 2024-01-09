@@ -289,12 +289,12 @@ $p_referral = [-33.33, -50, 50, 100, 0, 0, 0];
 /* #endregion */
 
 /* #region 02 January - 08 January */
-$p_total_daily = [-23.92, -39.82, -40.01];
-$p_paid_search = [-83.73, -81.61, -77.3];
-$p_direct = [272, 173.91, 43.48];
-$p_organic_search = [-17.65, -61.9, -18.75];
-$p_organic_social = [-100, -100, -50];
-$p_referral = [0, 0, 0];
+$p_total_daily = [-23.92, -39.82, -40.01, -13.95, -15.9, -46.07, -64.16];
+$p_paid_search = [-83.73, -81.61, -77.3, -21.89, -51.4, -68.29, -91.5];
+$p_direct = [272, 173.91, 43.48, -5, 555.56, 160, 231.25];
+$p_organic_search = [-17.65, -61.9, -18.75, 53.85, 0, 0, 114.29];
+$p_organic_social = [-100, -100, -50, 25, 100, 100, -50];
+$p_referral = [0, 0, 0, 0, -100, -100, 100];
 /* #endregion */
 
 /* #region FUNCTIONS */
@@ -441,7 +441,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <th>12/<?= $day ?>/2023</th>
+                                <th><?= $month[0] ?>/<?= $day ?>/2023</th>
                             <?php endforeach; ?>
                         </tr>
                     </thead>
@@ -467,7 +467,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <th>12/<?= $day ?>/2023</th>
+                                <th><?= $month[0] ?>/<?= $day ?>/2023</th>
                                 <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
@@ -495,7 +495,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <th>12/<?= $day ?>/2023</th>
+                                <th><?= $month[0] ?><?= $day ?>/2023</th>
                                 <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
@@ -523,7 +523,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <th>12/<?= $day ?>/2023</th>
+                                <th><?= $month[0] ?><?= $day ?>/2023</th>
                                 <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
@@ -551,7 +551,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <th>12/<?= $day ?>/2023</th>
+                                <th><?= $month[0] ?>/<?= $day ?>/2023</th>
                                 <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
@@ -579,7 +579,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <th>12/<?= $day ?>/2023</th>
+                                <th><?= $month[0] ?>/<?= $day ?>/2023</th>
                                 <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
