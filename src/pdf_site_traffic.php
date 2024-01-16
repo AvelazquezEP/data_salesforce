@@ -298,12 +298,12 @@ $p_referral = [-33.33, -50, 50, 100, 0, 0, 0];
 /* #endregion */
 
 /* #region 09 January - 15 January */
-$p_total_daily = [-60.59, -58.801, -43.01, 63.96, 85.98, -33.33];
-$p_paid_search = [-81.19, -90.91, -79.08, 81.53, 178.16, -57.69];
-$p_direct = [-20.55, 3.17, 42, 15.79, -11.86, -7.69];
-$p_organic_search = [-53.57, -35, -48.28, 50, -28.57, -42.86];
-$p_organic_social = [100, -100, -100, -40, -33.33, -100];
-$p_referral = [-100, -100, 0, 0, -100, 0];
+$p_total_daily = [-60.59, -58.801, -43.01, 63.96, 85.98, -33.33, 37.93];
+$p_paid_search = [-81.19, -90.91, -79.08, 81.53, 178.16, -57.69, 58.03];
+$p_direct = [-20.55, 3.17, 42, 15.79, -11.86, -7.69, -10.94];
+$p_organic_search = [-53.57, -35, -48.28, 50, -28.57, -42.86, 10.71];
+$p_organic_social = [100, -100, -100, -40, -33.33, -100, 33.33];
+$p_referral = [-100, -100, 0, 0, -100, 0, 0];
 /* #endregion */
 
 /* #region FUNCTIONS */
@@ -504,7 +504,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <th><?= $month[0] ?><?= $day ?>/2023</th>
+                                <th><?= $month[0] ?>/<?= $day ?>/2023</th>
                                 <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
@@ -532,7 +532,7 @@ $last_date = "08/09/2023 - 08/14/2023";
                     <thead>
                         <tr class="active">
                             <?php foreach ($week as $day) : ?>
-                                <th><?= $month[0] ?><?= $day ?>/2023</th>
+                                <th><?= $month[0] ?>/<?= $day ?>/2023</th>
                                 <!-- <th><?= $day ?></th> -->
                             <?php endforeach; ?>
                         </tr>
