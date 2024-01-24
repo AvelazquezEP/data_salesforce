@@ -316,12 +316,12 @@ $p_referral = [-33.33, -50, 50, 100, 0, 0, 0];
 /* #endregion */
 
 /* #region 23 January - 29 January */
-$p_total_daily = [];
-$p_paid_search = [];
-$p_direct = [];
-$p_organic_search = [];
-$p_organic_social = [];
-$p_referral = [];
+$p_total_daily = [-50.45];
+$p_paid_search = [-79.74];
+$p_direct = [3.28];
+$p_organic_search = [-55.88];
+$p_organic_social = [-50];
+$p_referral = [0];
 /* #endregion */
 
 /* #region FUNCTIONS */
