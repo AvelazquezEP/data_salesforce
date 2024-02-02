@@ -439,7 +439,6 @@ $cell_red = "#ff8f8f";
 $cell_green = "#beecb9";
 $actual_date = "08/16/2023 - 08/22/2023";
 $last_date = "08/09/2023 - 08/14/2023";
-
 ?>
 
 <!DOCTYPE html>
