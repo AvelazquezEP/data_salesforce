@@ -333,13 +333,13 @@ $p_referral = [-33.33, -50, 50, 100, 0, 0, 0];
 /* #endregion */
 /* #endregion */
 
-/* #region 23 January - 29 January */
-$p_total_daily = [];
-$p_paid_search = [];
-$p_direct = [];
-$p_organic_search = [];
-$p_organic_social = [];
-$p_referral = [];
+/* #region 06 January - 12 January */
+$p_total_daily = [44.92, -40.63];
+$p_paid_search = [50.18, -84.49];
+$p_direct = [21.05, 66.15];
+$p_organic_search = [48, -58.33];
+$p_organic_social = [-33.33, -100];
+$p_referral = [0, 0];
 /* #endregion */
 
 /* #region FUNCTIONS */
