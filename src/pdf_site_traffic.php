@@ -5,7 +5,7 @@ session_start();
 $total = 0;
 $total_last_week = 0;
 
-$week = [13, 14, 15, 16, 17, 18, 19];
+$week = [20, 21, 22, 23, 24, 25, 26];
 $month = [02, 02];
 
 /* #region Weekly data */
@@ -337,15 +337,24 @@ $p_referral = [-100, 20, 66.67, 0];
 // $p_organic_social = [-33.33, -100, -100, -50, 0, 50, -50];
 // $p_referral = [0, 0, -100, 0, -50, 0, 0];
 /* #endregion */
-/* #endregion */
 
 /* #region 13 February - 19 February */
-$p_total_daily = [-69, -59.17, -6.11, 5.71, -5.5, -42.37, -51.29];
-$p_paid_search = [-91.12, -87.76, -7.23, 20.17, 4.37, -77.27, -95.04];
-$p_direct = [26.09, 29.27, -1.59, -33.33, -35.94, 4.76, 189.09];
-$p_organic_search = [-54.05, -79.41, -23.08, -21.74, -22.22, -66.67, -39.29];
-$p_organic_social = [-100, -60, 40, 0, 100, -100, -66.67];
-$p_referral = [-60, -100, 0, 0, 100, -100, -100];
+// $p_total_daily = [-69, -59.17, -6.11, 5.71, -5.5, -42.37, -51.29];
+// $p_paid_search = [-91.12, -87.76, -7.23, 20.17, 4.37, -77.27, -95.04];
+// $p_direct = [26.09, 29.27, -1.59, -33.33, -35.94, 4.76, 189.09];
+// $p_organic_search = [-54.05, -79.41, -23.08, -21.74, -22.22, -66.67, -39.29];
+// $p_organic_social = [-100, -60, 40, 0, 100, -100, -66.67];
+// $p_referral = [-60, -100, 0, 0, 100, -100, -100];
+/* #endregion */
+/* #endregion */
+
+/* #region 20 February - 26 February */
+$p_total_daily = [];
+$p_paid_search = [];
+$p_direct = [];
+$p_organic_search = [];
+$p_organic_social = [];
+$p_referral = [];
 /* #endregion */
 
 /* #region FUNCTIONS */
